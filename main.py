@@ -31,7 +31,7 @@ class minion:
         self.testobj = myclass()
 
     def testMe(self):
-        self.testobj.printInfo()
+
         try:
             self.testobj.testSetup()
 
