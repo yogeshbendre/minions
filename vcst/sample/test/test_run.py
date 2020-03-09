@@ -22,7 +22,8 @@ class Test:
 
     def loginToVc(self):
         self.logger.info('Perform loginToVc')
-        self.si = ConnectAnchor(os.getenv("vcenter"), os.getenv("username"), os.getenv("password"))
+        self.ca = ConnectAnchor(os.getenv("vcenter"), os.getenv("username"), os.getenv("password"))
+        self.si = self.ca.loginToVc()
 
         self.logger.info('Finished  loginToVc')
 
@@ -38,17 +39,12 @@ class Test:
 
     def testSetup(self):
         self.logger.info('Perform testSetup')
-        #a=1/0
-        self.opDivideByX(1)
+        self.loginToVc()
 
         self.logger.info('Finished  testSetup')
 
     def testTask(self):
         self.logger.info('Perform testTask')
-        self.loginToVc()
-        self.opDivideByX(0)
-        self.opDivideByX(0)
-        self.opDivideByX(0)
         self.opDivideByX(0)
 
         self.logger.info('Finished  testTask')

@@ -11,8 +11,11 @@ class ConnectAnchor:
 
     def __init__(self,vcenter,username,password):
         self.vcenter = vcenter
+        print(self.vcenter)
         self.username = username
+        print(self.username)
         self.password = password
+        print(self.password)
 
     def loginToVc(self):
         si = SmartConnectNoSSL(

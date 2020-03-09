@@ -12,7 +12,8 @@ class Test:
         pass
 
     def loginToVc(self):
-        self.si = ConnectAnchor(os.getenv("vcenter"), os.getenv("username"), os.getenv("password"))
+        self.ca = ConnectAnchor(os.getenv("vcenter"), os.getenv("username"), os.getenv("password"))
+        self.si = self.ca.loginToVc()
 
     def opDivideByX(self,x):
         try:
@@ -21,14 +22,9 @@ class Test:
             pass
 
     def testSetup(self):
-        #a=1/0
-        self.opDivideByX(1)
+        self.loginToVc()
 
     def testTask(self):
-        self.loginToVc()
-        self.opDivideByX(0)
-        self.opDivideByX(0)
-        self.opDivideByX(0)
         self.opDivideByX(0)
 
     def testCleanup(self):
