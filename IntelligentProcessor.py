@@ -51,14 +51,14 @@ class IntelligentProcessor:
         firstfuncdone = False
         prevdef = ""
         for line in mylines:
-            print(line)
+            #print(line)
             nextlineind = nextlineind + 1
             if nextlineind < len(mylines):
                 nextline = mylines[nextlineind]
 
                 if 'def ' in line:
 
-                    print('Found '+line)
+                    #print('Found '+line)
                     sp = self.getNextLineSpaces(line, mylines[nextlineind])
 
                     make_prev_print_stmt=""
@@ -80,7 +80,7 @@ class IntelligentProcessor:
                     prevdef = currdef
 
                 elif 'except ' in line:
-                    print('Found exception line')
+                    #print('Found exception line')
                     e_obj = line.split("as ")[1].split(":")[0]
                     sp = self.getNextLineSpaces(line, mylines[nextlineind])
                     make_print_stmt = sp + "self.logger.error('Failed in " + prevdef + ": '+str("+e_obj+"))"

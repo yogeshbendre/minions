@@ -1,5 +1,8 @@
 from main import minion
-m = minion('vcst.sample.test.test')
+import os
+iterations = int(os.getenv("iterations"))
+#m = minion('vcst.sample.test.test')
+m = minion('vcst.sample.vm.vmotion')
 m.preprocessTestFile()
 m.initializeTestObj()
-m.testMe()
+m.testMe(iterations, 2)

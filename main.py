@@ -1,4 +1,6 @@
 from IntelligentProcessor import IntelligentProcessor as IP
+import os
+import logging.config
 
 class minion:
 
@@ -10,43 +12,51 @@ class minion:
     def __init__(self,testfilepath):
         self.testfilepath = testfilepath
         self.newtestfilepath = testfilepath + self.mysuffix
+        logging.config.fileConfig('logging.conf')
+        self.logger = logging.getLogger('minion')
 
     def preprocessTestFile(self):
-
-        #mycontent = None
         srcFile = self.testfilepath.replace('.','/')+'.py'
         destFile = self.newtestfilepath.replace('.', '/') + '.py'
-        #with open(srcFile,'r') as fp:
-        #   mycontent = fp.read()
-
-        #with open(destFile, 'w') as fp:
-        #    fp.write(mycontent)
         myprocessor = IP(srcFile,destFile)
         myprocessor.processContents()
-        print('Processed: '+self.testfilepath)
+        self.logger.info('Processed: '+self.testfilepath)
 
     def initializeTestObj(self):
         mod = __import__(self.newtestfilepath, fromlist=['Test'])
         myclass = getattr(mod, 'Test')
         self.testobj = myclass()
+        self.logger.info("Initialized Test Obj")
 
-    def testMe(self):
-
+    def testMe(self,iterations,retryCnt):
+        self.logger.info("Trigger test for iterations: "+str(iterations)+" with retryCnt: "+str(retryCnt))
+        passed = 0
+        failed = 0
+        retry = 0
         try:
             self.testobj.testSetup()
-
+            self.logger.info("Test Setup Passed")
         except Exception as e:
-            print("Test Setup Failed: "+str(e))
+            self.logger.error("Test Setup Failed: "+str(e))
             return
-
-        try:
-            self.testobj.testTask()
-        except Exception as e:
-            print("Test Failed: "+str(e))
-
+        for it in range(0, iterations):
+            try:
+                testSuccess = self.testobj.testTask()
+                assert (testSuccess), "Test Failed"
+                passed=passed + 1
+                self.logger.info("Test Passed Iteration "+str(it+1)+" Out of "+str(iterations)+" Pass Rate: "+str(round(100*passed/iterations))+"%")
+            except Exception as e:
+                self.logger.info("Test Failed Iteration "+str(it+1)+" Out of "+str(iterations)+" Pass Rate: "+str(round(100*passed/iterations))+"%")
+                failed = failed+1
+                retry = retry + 1
+                if retry > retryCnt:
+                    break
+                continue
         try:
             self.testobj.testCleanup()
         except Exception as e:
-            print("Test Cleanup Failed: "+str(e))
+            self.logger.warning("Test Cleanup Failed: "+str(e))
 
+        pp = round(100*passed/iterations)
+        self.logger.info("Test Result: Pass: "+str(passed)+" Failed: "+str(failed)+" Pass Percentage: "+str(pp)+"%")
 
