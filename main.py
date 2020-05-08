@@ -9,11 +9,15 @@ class minion:
     testobj = None
     mysuffix = '_run'
 
-    def __init__(self,testfilepath):
+    def __init__(self,testfilepath,preprocess=False):
         self.testfilepath = testfilepath
         self.newtestfilepath = testfilepath + self.mysuffix
         logging.config.fileConfig('logging.conf')
         self.logger = logging.getLogger('minion')
+        if preprocess:
+            self.preprocessTestFile()
+        else:
+            self.newtestfilepath = testfilepath
 
     def preprocessTestFile(self):
         srcFile = self.testfilepath.replace('.','/')+'.py'
@@ -26,7 +30,6 @@ class minion:
         mod = __import__(self.newtestfilepath, fromlist=['Test'])
         myclass = getattr(mod, 'Test')
         self.testobj = myclass()
-        self.logger.info("Initialized Test Obj")
 
     def testMe(self,iterations,retryCnt):
         self.logger.info("Trigger test for iterations: "+str(iterations)+" with retryCnt: "+str(retryCnt))
