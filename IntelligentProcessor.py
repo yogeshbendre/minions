@@ -84,6 +84,8 @@ class IntelligentProcessor:
                     e_obj = line.split("as ")[1].split(":")[0]
                     sp = self.getNextLineSpaces(line, mylines[nextlineind])
                     make_print_stmt = sp + "self.logger.error('Failed in " + prevdef + ": '+str("+e_obj+"))"
+                    make_print_stmt = make_print_stmt+"\n"+sp + "self.logger.exception('')"
+
                     mynewcontent = mynewcontent + "\n" + line + "\n" + make_print_stmt
 
 

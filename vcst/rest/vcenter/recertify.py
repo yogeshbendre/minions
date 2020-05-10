@@ -60,7 +60,18 @@ class Test:
         self.get_vc_session()
 
     def testTask(self):
-        pass
+        myurl = "https://"+self.vc+":"+self.port+" /rest/vcenter/certificate-management/vcenter/vmca-root"
+        mydata={}
+
+        myheader = {
+            "Content-Type": "application/json",
+            "'vmware-api-session-id": str(self.sessionval)
+        }
+        print(myurl)
+        myresp=self.mysession.post(myurl,data=json.dumps(mydata),headers=myheader)
+        print(myresp.text)
+        self.logger.info(myresp.status_code)
+        self.logger.info(str(myresp.text))
 
     def testCleanup(self):
         pass

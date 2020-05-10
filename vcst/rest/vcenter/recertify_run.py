@@ -62,6 +62,7 @@ class Test:
             return ret
         except Exception as e:
             self.logger.error('Failed in get_vc_session: '+str(e))
+            self.logger.exception('')
             print("Authentication failed")
             print(myresp.text)
             self.sessionval = None
@@ -77,7 +78,18 @@ class Test:
 
     def testTask(self):
         self.logger.info('Perform testTask')
-        pass
+        myurl = "https://"+self.vc+":"+self.port+" /rest/vcenter/certificate-management/vcenter/vmca-root"
+        mydata={}
+
+        myheader = {
+            "Content-Type": "application/json",
+            "'vmware-api-session-id": str(self.sessionval)
+        }
+        print(myurl)
+        myresp=self.mysession.post(myurl,data=json.dumps(mydata),headers=myheader)
+        print(myresp.text)
+        self.logger.info(myresp.status_code)
+        self.logger.info(str(myresp.text))
 
         self.logger.info('Finished  testTask')
 
