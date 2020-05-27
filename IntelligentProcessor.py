@@ -14,7 +14,7 @@ class IntelligentProcessor:
         self.destPath = destPath
 
     def createLogger(self):
-        logging.config.fileConfig('logging.conf')
+        logging.config.fileConfig('logging.conf', False)
         # create logger
         self.logger = logging.getLogger('RunThisTest')
 

@@ -12,7 +12,7 @@ class minion:
     def __init__(self,testfilepath,preprocess=False):
         self.testfilepath = testfilepath
         self.newtestfilepath = testfilepath + self.mysuffix
-        logging.config.fileConfig('logging.conf')
+        logging.config.fileConfig('logging.conf', False)
         self.logger = logging.getLogger('minion')
         if preprocess:
             self.preprocessTestFile()
