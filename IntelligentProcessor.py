@@ -51,6 +51,8 @@ class IntelligentProcessor:
         firstfuncdone = False
         prevdef = ""
         for line in mylines:
+            linechange = False
+            line2 = line
             print(line)
             nextlineind = nextlineind + 1
             if nextlineind < len(mylines):
@@ -71,11 +73,18 @@ class IntelligentProcessor:
                     myloggercall = ""
                     if '__init__' in line:
                         # This is an init function, must initialize a logger here
-                        myloggercall = sp + "logging.config.fileConfig('logging.conf')\n"
-                        myloggercall = myloggercall + sp + "self.logger = logging.getLogger('" + self.srcPath.replace("/",".").replace(".py","") + "')\n"
+                        line2 = line2.replace("):", ",testlogger):")
+                        linechange = True
+
+                        #myloggercall = sp + "logging.config.fileConfig('logging.conf')\n"
+                        #myloggercall = myloggercall + sp + "self.logger = logging.getLogger('" + self.srcPath.replace("/",".").replace(".py","") + "')\n"
+                        myloggercall = sp + "self.logger = testlogger\n"
                         make_print_stmt = myloggercall + make_print_stmt
 
-                    mynewcontent = mynewcontent+"\n"+make_prev_print_stmt+"\n"+line+"\n"+make_print_stmt
+                    if linechange:
+                        mynewcontent = mynewcontent + "\n" + make_prev_print_stmt + "\n" + line2 + "\n" + make_print_stmt
+                    else:
+                        mynewcontent = mynewcontent+"\n"+make_prev_print_stmt+"\n"+line+"\n"+make_print_stmt
                     firstfuncdone = True
                     prevdef = currdef
 
