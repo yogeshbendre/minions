@@ -31,3 +31,40 @@
 2020-05-27 18:18:47,396 - vcst.rest.vcenter.login_logout - INFO - Perform testTask
 2020-05-27 18:18:47,398 - vcst.rest.vcenter.login_logout - INFO - Perform get_vc_session
 2020-05-27 18:18:48,222 - vcst.rest.vcenter.login_logout - INFO - Perform testCleanup
+2020-05-29 15:27:09,334 - vcst.pyvmomi.vm.vmotion - INFO - Perform __init__
+2020-05-29 15:27:09,336 - vcst.pyvmomi.vm.vmotion - INFO - Finished  __init__
+2020-05-29 15:27:09,415 - vcst.pyvmomi.vm.vmotion - INFO - Perform testSetup
+2020-05-29 15:27:09,451 - vcst.pyvmomi.vm.vmotion - INFO - Perform get_vc_session
+2020-05-29 15:27:12,496 - vcst.pyvmomi.vm.vmotion - INFO - Finished  get_vc_session
+2020-05-29 15:27:12,740 - vcst.pyvmomi.vm.vmotion - INFO - Finished  testSetup
+2020-05-29 15:27:12,796 - vcst.pyvmomi.vm.vmotion - INFO - Perform testTask
+2020-05-29 15:27:12,898 - vcst.pyvmomi.vm.vmotion - INFO - Perform testCleanup
+2020-05-29 15:33:19,772 - vcst.pyvmomi.vm.vmotion - INFO - Perform __init__
+2020-05-29 15:33:19,773 - vcst.pyvmomi.vm.vmotion - INFO - Finished  __init__
+2020-05-29 15:33:19,814 - vcst.pyvmomi.vm.vmotion - INFO - Perform testSetup
+2020-05-29 15:33:19,849 - vcst.pyvmomi.vm.vmotion - INFO - Perform get_vc_session
+2020-05-29 15:33:22,668 - vcst.pyvmomi.vm.vmotion - INFO - Finished  get_vc_session
+2020-05-29 15:33:22,933 - vcst.pyvmomi.vm.vmotion - INFO - Finished  testSetup
+2020-05-29 15:33:22,977 - vcst.pyvmomi.vm.vmotion - INFO - Perform testTask
+2020-05-29 15:33:23,020 - vcst.pyvmomi.vm.vmotion - INFO - Perform vmotion_vm
+2020-05-29 15:33:23,068 - vcst.pyvmomi.vm.vmotion - INFO - Search VM to be vmotioned Liliput-VM01
+2020-05-29 15:33:23,106 - vcst.pyvmomi.vm.vmotion - INFO - Perform get_obj
+2020-05-29 15:36:48,252 - vcst.pyvmomi.vm.vmotion - INFO - Perform __init__
+2020-05-29 15:36:48,253 - vcst.pyvmomi.vm.vmotion - INFO - Finished  __init__
+2020-05-29 15:36:48,285 - vcst.pyvmomi.vm.vmotion - INFO - Perform testSetup
+2020-05-29 15:36:48,306 - vcst.pyvmomi.vm.vmotion - INFO - Perform get_vc_session
+2020-05-29 15:36:50,627 - vcst.pyvmomi.vm.vmotion - INFO - Finished  get_vc_session
+2020-05-29 15:36:50,873 - vcst.pyvmomi.vm.vmotion - INFO - Finished  testSetup
+2020-05-29 15:36:50,905 - vcst.pyvmomi.vm.vmotion - INFO - Perform testTask
+2020-05-29 15:36:50,942 - vcst.pyvmomi.vm.vmotion - INFO - Perform vmotion_vm
+2020-05-29 15:36:50,984 - vcst.pyvmomi.vm.vmotion - INFO - Search VM to be vmotioned Liliput-VM01
+2020-05-29 15:36:51,029 - vcst.pyvmomi.vm.vmotion - INFO - Perform get_obj
+2020-05-29 15:45:38,515 - vcst.pyvmomi.vm.vmotion - INFO - VM Found
+2020-05-29 15:45:38,515 - vcst.pyvmomi.vm.vmotion - INFO - Search dest host w1-hs4-q2202.eng.vmware.com
+2020-05-29 15:45:38,563 - vcst.pyvmomi.vm.vmotion - INFO - Perform get_obj
+2020-05-29 15:45:44,796 - vcst.pyvmomi.vm.vmotion - INFO - Dest host found
+2020-05-29 15:45:45,033 - vcst.pyvmomi.vm.vmotion - INFO - Migrating Liliput-VM01 to destination host w1-hs4-q2202.eng.vmware.com
+2020-05-29 15:45:45,279 - vcst.pyvmomi.vm.vmotion - INFO - Perform wait_for_task
+2020-05-29 15:45:49,837 - vcst.pyvmomi.vm.vmotion - INFO - Task completed successfully
+2020-05-29 15:45:50,080 - vcst.pyvmomi.vm.vmotion - INFO - Finished  vmotion_vm
+2020-05-29 15:45:50,119 - vcst.pyvmomi.vm.vmotion - INFO - Perform testCleanup
