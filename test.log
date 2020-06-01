@@ -68,3 +68,38 @@
 2020-05-29 15:45:49,837 - vcst.pyvmomi.vm.vmotion - INFO - Task completed successfully
 2020-05-29 15:45:50,080 - vcst.pyvmomi.vm.vmotion - INFO - Finished  vmotion_vm
 2020-05-29 15:45:50,119 - vcst.pyvmomi.vm.vmotion - INFO - Perform testCleanup
+2020-06-01 17:18:48,379 - vcst.pyvmomi.vcenter.login_logout - INFO - Perform __init__
+2020-06-01 17:18:48,380 - vcst.pyvmomi.vcenter.login_logout - INFO - No vm name provided, please set environment variable testvm
+2020-06-01 17:18:48,415 - vcst.pyvmomi.vcenter.login_logout - INFO - Perform testSetup
+2020-06-01 17:18:48,441 - vcst.pyvmomi.vcenter.login_logout - INFO - Finished  testSetup
+2020-06-01 17:18:48,476 - vcst.pyvmomi.vcenter.login_logout - INFO - Perform testTask
+2020-06-01 17:18:48,509 - vcst.pyvmomi.vcenter.login_logout - INFO - Perform login
+2020-06-01 17:18:48,545 - vcst.pyvmomi.vcenter.login_logout - ERROR - Failed in login: 'Test' object has no attribute 'username'
+2020-06-01 17:18:48,548 - vcst.pyvmomi.vcenter.login_logout - ERROR - 
+Traceback (most recent call last):
+  File "C:\GIT\minions\vcst\pyvmomi\vcenter\login_logout_run.py", line 57, in login
+    si = SmartConnectNoSSL(host=self.vc, user=self.username, pwd=self.password, port=self.port)
+AttributeError: 'Test' object has no attribute 'username'
+2020-06-01 17:18:48,555 - vcst.pyvmomi.vcenter.login_logout - INFO - Perform logout
+2020-06-01 17:18:48,617 - vcst.pyvmomi.vcenter.login_logout - INFO - Finished  logout
+2020-06-01 17:18:48,622 - vcst.pyvmomi.vcenter.login_logout - INFO - Perform testCleanup
+2020-06-01 17:21:08,114 - vcst.pyvmomi.vcenter.login_logout - INFO - Perform __init__
+2020-06-01 17:21:08,115 - vcst.pyvmomi.vcenter.login_logout - INFO - Finished  __init__
+2020-06-01 17:21:08,157 - vcst.pyvmomi.vcenter.login_logout - INFO - Perform testSetup
+2020-06-01 17:21:08,184 - vcst.pyvmomi.vcenter.login_logout - INFO - Finished  testSetup
+2020-06-01 17:21:08,230 - vcst.pyvmomi.vcenter.login_logout - INFO - Perform testTask
+2020-06-01 17:21:08,252 - vcst.pyvmomi.vcenter.login_logout - INFO - Perform login
+2020-06-01 17:21:10,720 - vcst.pyvmomi.vcenter.login_logout - INFO - Finished  login
+2020-06-01 17:21:10,720 - vcst.pyvmomi.vcenter.login_logout - INFO - Perform logout
+2020-06-01 17:21:11,287 - vcst.pyvmomi.vcenter.login_logout - INFO - Finished  logout
+2020-06-01 17:21:11,325 - vcst.pyvmomi.vcenter.login_logout - INFO - Perform testCleanup
+2020-06-01 17:24:04,745 - vcst.pyvmomi.vcenter.login_logout - INFO - Perform __init__
+2020-06-01 17:24:04,746 - vcst.pyvmomi.vcenter.login_logout - INFO - Finished  __init__
+2020-06-01 17:24:04,781 - vcst.pyvmomi.vcenter.login_logout - INFO - Perform testSetup
+2020-06-01 17:24:04,806 - vcst.pyvmomi.vcenter.login_logout - INFO - Finished  testSetup
+2020-06-01 17:24:04,839 - vcst.pyvmomi.vcenter.login_logout - INFO - Perform testTask
+2020-06-01 17:24:04,845 - vcst.pyvmomi.vcenter.login_logout - INFO - Perform login
+2020-06-01 17:24:07,536 - vcst.pyvmomi.vcenter.login_logout - INFO - Finished  login
+2020-06-01 17:24:07,536 - vcst.pyvmomi.vcenter.login_logout - INFO - Perform logout
+2020-06-01 17:24:08,131 - vcst.pyvmomi.vcenter.login_logout - INFO - Finished  logout
+2020-06-01 17:24:08,167 - vcst.pyvmomi.vcenter.login_logout - INFO - Perform testCleanup

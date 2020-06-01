@@ -47,6 +47,9 @@ class minion:
         mod = __import__(self.newtestfilepath, fromlist=['Test'])
         myclass = getattr(mod, 'Test')
         self.testobj = myclass(self.clientlogger)
+        if self.testobj is None:
+            self.logger.error("Failed to create test object")
+            exit(1)
 
     def testMe(self, iterations, retryCnt):
         self.logger.info("Trigger test for iterations: "+str(iterations)+" with retryCnt: "+str(retryCnt))
@@ -79,5 +82,5 @@ class minion:
             self.logger.warning("Test Cleanup Failed: "+str(e))
 
         pp = round(100*passed/iterations)
-        self.logger.info("Test Result: Pass: "+str(passed)+" Failed: "+str(failed)+" Pass Percentage: "+str(pp)+"%")
+        self.logger.info("Test Result: Total: "+str(iterations)+" Pass: "+str(passed)+" Failed: "+str(failed)+" Pass Percentage: "+str(pp)+"%")
 
