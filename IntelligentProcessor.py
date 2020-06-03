@@ -97,7 +97,8 @@ class IntelligentProcessor:
 
                     mynewcontent = mynewcontent + "\n" + line + "\n" + make_print_stmt
 
-
+                elif 'print(' in line:
+                    mynewcontent = mynewcontent+"\n"+line.replace("print(", "self.logger.info(")
 
                 else:
                     mynewcontent = mynewcontent+"\n"+line

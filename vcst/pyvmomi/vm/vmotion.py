@@ -21,7 +21,7 @@ class Test:
         if self.vm is None:
             self.logger.info("No vm name provided, please set environment variable testvm")
             return
-
+        self.srchost = None
         self.desthost = os.getenv("testdesthost")
         if self.vm is None:
             self.logger.info("No desthost name provided, please set environment variable testdesthost")
@@ -86,6 +86,7 @@ class Test:
     def vmotion_vm(self, vm_name, dest_host):
         self.logger.info("Search VM to be vmotioned "+vm_name)
         vm = self.get_obj([vim.VirtualMachine], vm_name)
+        self.srchost = vm.runtime.host.name
         self.logger.info("VM Found")
         self.logger.info("Search dest host "+dest_host)
         destination_host = self.get_obj([vim.HostSystem], dest_host)
@@ -108,6 +109,7 @@ class Test:
 
     def testTask(self):
         self.vmotion_vm(self.vm, self.desthost)
+        self.vmotion_vm(self.vm, self.srchost)
         return True
 
     def testCleanup(self):

@@ -103,3 +103,65 @@ AttributeError: 'Test' object has no attribute 'username'
 2020-06-01 17:24:07,536 - vcst.pyvmomi.vcenter.login_logout - INFO - Perform logout
 2020-06-01 17:24:08,131 - vcst.pyvmomi.vcenter.login_logout - INFO - Finished  logout
 2020-06-01 17:24:08,167 - vcst.pyvmomi.vcenter.login_logout - INFO - Perform testCleanup
+2020-06-03 15:40:52,474 - vcst.pyvmomi.vm.xclustervmotion - INFO - Perform __init__
+2020-06-03 15:40:52,475 - vcst.pyvmomi.vm.xclustervmotion - INFO - Finished  __init__
+2020-06-03 15:40:52,507 - vcst.pyvmomi.vm.xclustervmotion - INFO - Perform testSetup
+2020-06-03 15:40:52,535 - vcst.pyvmomi.vm.xclustervmotion - INFO - Perform get_vc_session
+2020-06-03 15:40:54,577 - vcst.pyvmomi.vm.xclustervmotion - INFO - Finished  get_vc_session
+2020-06-03 15:40:54,798 - vcst.pyvmomi.vm.xclustervmotion - INFO - Finished  testSetup
+2020-06-03 15:40:54,826 - vcst.pyvmomi.vm.xclustervmotion - INFO - Perform testTask
+2020-06-03 15:40:54,831 - vcst.pyvmomi.vm.xclustervmotion - INFO - Perform relocate_vm
+2020-06-03 15:40:54,864 - vcst.pyvmomi.vm.xclustervmotion - INFO - Perform get_obj
+2020-06-03 15:41:02,531 - vcst.pyvmomi.vm.xclustervmotion - ERROR - Failed in relocate_vm: 'ManagedObject[]' object has no attribute 'info'
+2020-06-03 15:41:02,531 - vcst.pyvmomi.vm.xclustervmotion - ERROR - 
+Traceback (most recent call last):
+  File "C:\GIT\minions\vcst\pyvmomi\vm\xclustervmotion_run.py", line 170, in relocate_vm
+    self.srcdatastore = vm.datastore.info.name
+AttributeError: 'ManagedObject[]' object has no attribute 'info'
+2020-06-03 15:41:02,576 - vcst.pyvmomi.vm.xclustervmotion - INFO - Perform relocate_vm
+2020-06-03 15:41:02,595 - vcst.pyvmomi.vm.xclustervmotion - INFO - Perform get_obj
+2020-06-03 15:41:10,022 - vcst.pyvmomi.vm.xclustervmotion - ERROR - Failed in relocate_vm: 'ManagedObject[]' object has no attribute 'info'
+2020-06-03 15:41:10,023 - vcst.pyvmomi.vm.xclustervmotion - ERROR - 
+Traceback (most recent call last):
+  File "C:\GIT\minions\vcst\pyvmomi\vm\xclustervmotion_run.py", line 170, in relocate_vm
+    self.srcdatastore = vm.datastore.info.name
+AttributeError: 'ManagedObject[]' object has no attribute 'info'
+2020-06-03 15:41:10,096 - vcst.pyvmomi.vm.xclustervmotion - INFO - Perform testCleanup
+2020-06-03 15:41:41,585 - vcst.pyvmomi.vm.xclustervmotion - INFO - Perform __init__
+2020-06-03 15:41:41,585 - vcst.pyvmomi.vm.xclustervmotion - INFO - Finished  __init__
+2020-06-03 15:41:41,607 - vcst.pyvmomi.vm.xclustervmotion - INFO - Perform testSetup
+2020-06-03 15:41:41,635 - vcst.pyvmomi.vm.xclustervmotion - INFO - Perform get_vc_session
+2020-06-03 15:41:43,691 - vcst.pyvmomi.vm.xclustervmotion - INFO - Finished  get_vc_session
+2020-06-03 15:41:43,909 - vcst.pyvmomi.vm.xclustervmotion - INFO - Finished  testSetup
+2020-06-03 15:41:43,937 - vcst.pyvmomi.vm.xclustervmotion - INFO - Perform testTask
+2020-06-03 15:41:43,945 - vcst.pyvmomi.vm.xclustervmotion - INFO - Perform relocate_vm
+2020-06-03 15:41:43,974 - vcst.pyvmomi.vm.xclustervmotion - INFO - Perform get_obj
+2020-06-03 15:41:51,813 - vcst.pyvmomi.vm.xclustervmotion - INFO - Perform get_obj
+2020-06-03 15:41:53,572 - vcst.pyvmomi.vm.xclustervmotion - INFO - Perform collect_template_disks
+2020-06-03 15:41:54,067 - vcst.pyvmomi.vm.xclustervmotion - INFO - Perform get_obj
+2020-06-03 15:41:56,290 - vcst.pyvmomi.vm.xclustervmotion - INFO - Perform construct_locator
+2020-06-03 15:41:56,652 - vcst.pyvmomi.vm.xclustervmotion - INFO - Perform wait_for_task
+2020-06-03 15:44:01,503 - vcst.pyvmomi.vm.xclustervmotion - INFO - Perform relocate_vm
+2020-06-03 15:44:01,503 - vcst.pyvmomi.vm.xclustervmotion - INFO - Perform get_obj
+2020-06-03 15:44:09,160 - vcst.pyvmomi.vm.xclustervmotion - INFO - Perform get_obj
+2020-06-03 15:44:11,346 - vcst.pyvmomi.vm.xclustervmotion - INFO - Perform collect_template_disks
+2020-06-03 15:44:11,864 - vcst.pyvmomi.vm.xclustervmotion - INFO - Perform get_obj
+2020-06-03 15:44:12,960 - vcst.pyvmomi.vm.xclustervmotion - INFO - Perform construct_locator
+2020-06-03 15:44:13,260 - vcst.pyvmomi.vm.xclustervmotion - INFO - Perform wait_for_task
+2020-06-03 15:44:13,477 - vcst.pyvmomi.vm.xclustervmotion - INFO - Task completed successfully
+2020-06-03 15:44:13,695 - vcst.pyvmomi.vm.xclustervmotion - INFO - Perform testCleanup
+2020-06-03 15:51:41,017 - vcst.pyvmomi.vm.xclustervmotion - INFO - Perform __init__
+2020-06-03 15:51:41,017 - vcst.pyvmomi.vm.xclustervmotion - INFO - Finished  __init__
+2020-06-03 15:51:41,042 - vcst.pyvmomi.vm.xclustervmotion - INFO - Perform testSetup
+2020-06-03 15:51:41,063 - vcst.pyvmomi.vm.xclustervmotion - INFO - Perform get_vc_session
+2020-06-03 15:51:43,153 - vcst.pyvmomi.vm.xclustervmotion - INFO - Finished  get_vc_session
+2020-06-03 15:51:43,375 - vcst.pyvmomi.vm.xclustervmotion - INFO - Finished  testSetup
+2020-06-03 15:51:43,405 - vcst.pyvmomi.vm.xclustervmotion - INFO - Perform testTask
+2020-06-03 15:51:43,444 - vcst.pyvmomi.vm.xclustervmotion - INFO - Perform relocate_vm
+2020-06-03 15:51:43,448 - vcst.pyvmomi.vm.xclustervmotion - INFO - Perform get_obj
+2020-06-03 15:51:51,375 - vcst.pyvmomi.vm.xclustervmotion - INFO - Perform get_obj
+2020-06-03 15:51:54,011 - vcst.pyvmomi.vm.xclustervmotion - INFO - Perform collect_template_disks
+2020-06-03 15:51:54,526 - vcst.pyvmomi.vm.xclustervmotion - INFO - Perform get_obj
+2020-06-03 15:51:58,921 - vcst.pyvmomi.vm.xclustervmotion - INFO - Perform construct_locator
+2020-06-03 15:51:59,245 - vcst.pyvmomi.vm.xclustervmotion - INFO - Perform wait_for_task
+2020-06-03 15:52:00,117 - vcst.pyvmomi.vm.xclustervmotion - INFO - Perform testCleanup
