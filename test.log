@@ -165,3 +165,1465 @@ AttributeError: 'ManagedObject[]' object has no attribute 'info'
 2020-06-03 15:51:58,921 - vcst.pyvmomi.vm.xclustervmotion - INFO - Perform construct_locator
 2020-06-03 15:51:59,245 - vcst.pyvmomi.vm.xclustervmotion - INFO - Perform wait_for_task
 2020-06-03 15:52:00,117 - vcst.pyvmomi.vm.xclustervmotion - INFO - Perform testCleanup
+2020-06-04 10:54:13,591 - vcst.pyvmomi.vm.xclustervmotion - INFO - Perform __init__
+2020-06-04 10:54:13,591 - vcst.pyvmomi.vm.xclustervmotion - INFO - Finished  __init__
+2020-06-04 10:54:13,638 - vcst.pyvmomi.vm.xclustervmotion - INFO - Perform testSetup
+2020-06-04 10:54:13,671 - vcst.pyvmomi.vm.xclustervmotion - INFO - Perform get_vc_session
+2020-06-04 10:54:15,805 - vcst.pyvmomi.vm.xclustervmotion - INFO - Finished  get_vc_session
+2020-06-04 10:54:16,028 - vcst.pyvmomi.vm.xclustervmotion - INFO - Finished  testSetup
+2020-06-04 10:54:16,054 - vcst.pyvmomi.vm.xclustervmotion - INFO - Perform testTask
+2020-06-04 10:54:16,081 - vcst.pyvmomi.vm.xclustervmotion - INFO - Perform relocate_vm
+2020-06-04 10:54:16,093 - vcst.pyvmomi.vm.xclustervmotion - INFO - Perform get_obj
+2020-06-04 11:01:47,267 - vcst.pyvmomi.vm.xclustervmotion - INFO - Perform get_obj
+2020-06-04 11:01:55,203 - vcst.pyvmomi.vm.xclustervmotion - INFO - Perform collect_template_disks
+2020-06-04 11:01:55,440 - vcst.pyvmomi.vm.xclustervmotion - INFO - device.deviceInfo.summary:41,943,040 KB
+2020-06-04 11:01:55,667 - vcst.pyvmomi.vm.xclustervmotion - INFO - datastore.summary.type:vsan
+2020-06-04 11:01:55,667 - vcst.pyvmomi.vm.xclustervmotion - INFO - Disc Discription -- [ClusterC_vsan_ds] ba9fbf5e-76f0-3873-6098-e4434b16c4c0/Med-VM16.vmdk
+2020-06-04 11:01:55,668 - vcst.pyvmomi.vm.xclustervmotion - INFO - drive:ClusterC_vsan_ds
+2020-06-04 11:01:55,668 - vcst.pyvmomi.vm.xclustervmotion - INFO - device.backing.fileName:[ClusterC_vsan_ds] ba9fbf5e-76f0-3873-6098-e4434b16c4c0/Med-VM16.vmdk
+2020-06-04 11:01:55,668 - vcst.pyvmomi.vm.xclustervmotion - INFO - Perform get_obj
+2020-06-04 11:02:03,678 - vcst.pyvmomi.vm.xclustervmotion - INFO - Perform construct_locator
+2020-06-04 11:02:03,678 - vcst.pyvmomi.vm.xclustervmotion - INFO - relocate index:0
+2020-06-04 11:02:03,729 - vcst.pyvmomi.vm.xclustervmotion - INFO - disk:(vim.vm.device.VirtualDisk) {
+   dynamicType = <unset>,
+   dynamicProperty = (vmodl.DynamicProperty) [],
+   key = 2000,
+   deviceInfo = (vim.Description) {
+      dynamicType = <unset>,
+      dynamicProperty = (vmodl.DynamicProperty) [],
+      label = 'Hard disk 1',
+      summary = '41,943,040 KB'
+   },
+   backing = (vim.vm.device.VirtualDisk.FlatVer2BackingInfo) {
+      dynamicType = <unset>,
+      dynamicProperty = (vmodl.DynamicProperty) [],
+      fileName = '[ClusterC_vsan_ds] ba9fbf5e-76f0-3873-6098-e4434b16c4c0/Med-VM16.vmdk',
+      datastore = 'vim.Datastore:datastore-34450',
+      backingObjectId = '2ea0bf5e-1e7f-488d-6647-246e96d73d94',
+      diskMode = 'persistent',
+      split = false,
+      writeThrough = false,
+      thinProvisioned = true,
+      eagerlyScrub = false,
+      uuid = '6000C299-42aa-df65-63c4-274c37ed2fa6',
+      contentId = '83f43233dc052b87696c3bee0322da44',
+      changeId = <unset>,
+      parent = <unset>,
+      deltaDiskFormat = <unset>,
+      digestEnabled = false,
+      deltaGrainSize = <unset>,
+      deltaDiskFormatVariant = <unset>,
+      sharing = 'sharingNone',
+      keyId = <unset>
+   },
+   connectable = <unset>,
+   slotInfo = <unset>,
+   controllerKey = 1000,
+   unitNumber = 0,
+   capacityInKB = 41943040,
+   capacityInBytes = 42949672960,
+   shares = (vim.SharesInfo) {
+      dynamicType = <unset>,
+      dynamicProperty = (vmodl.DynamicProperty) [],
+      shares = 1000,
+      level = 'normal'
+   },
+   storageIOAllocation = (vim.StorageResourceManager.IOAllocationInfo) {
+      dynamicType = <unset>,
+      dynamicProperty = (vmodl.DynamicProperty) [],
+      limit = -1,
+      shares = (vim.SharesInfo) {
+         dynamicType = <unset>,
+         dynamicProperty = (vmodl.DynamicProperty) [],
+         shares = 1000,
+         level = 'normal'
+      },
+      reservation = 0
+   },
+   diskObjectId = '15-2000',
+   vFlashCacheConfigInfo = <unset>,
+   iofilter = (str) [],
+   vDiskId = <unset>,
+   nativeUnmanagedLinkedClone = false
+}
+2020-06-04 11:02:03,810 - vcst.pyvmomi.vm.xclustervmotion - INFO - drive:ClusterC_vsan_ds
+2020-06-04 11:02:03,818 - vcst.pyvmomi.vm.xclustervmotion - INFO - wdisk.backing.fileName:[ClusterC_vsan_ds] ba9fbf5e-76f0-3873-6098-e4434b16c4c0/Med-VM16.vmdk
+2020-06-04 11:02:04,053 - vcst.pyvmomi.vm.xclustervmotion - INFO - Perform wait_for_task
+2020-06-04 11:02:13,559 - vcst.pyvmomi.vm.xclustervmotion - INFO - Task completed successfully
+2020-06-04 11:02:13,780 - vcst.pyvmomi.vm.xclustervmotion - INFO - Perform relocate_vm
+2020-06-04 11:02:13,780 - vcst.pyvmomi.vm.xclustervmotion - INFO - Perform get_obj
+2020-06-04 11:09:45,763 - vcst.pyvmomi.vm.xclustervmotion - INFO - Perform get_obj
+2020-06-04 11:09:51,334 - vcst.pyvmomi.vm.xclustervmotion - INFO - Perform collect_template_disks
+2020-06-04 11:09:51,567 - vcst.pyvmomi.vm.xclustervmotion - INFO - device.deviceInfo.summary:41,943,040 KB
+2020-06-04 11:09:51,788 - vcst.pyvmomi.vm.xclustervmotion - INFO - datastore.summary.type:vsan
+2020-06-04 11:09:51,788 - vcst.pyvmomi.vm.xclustervmotion - INFO - Disc Discription -- [ClusterC_vsan_ds] ba9fbf5e-76f0-3873-6098-e4434b16c4c0/Med-VM16.vmdk
+2020-06-04 11:09:51,833 - vcst.pyvmomi.vm.xclustervmotion - INFO - drive:ClusterC_vsan_ds
+2020-06-04 11:09:51,845 - vcst.pyvmomi.vm.xclustervmotion - INFO - device.backing.fileName:[ClusterC_vsan_ds] ba9fbf5e-76f0-3873-6098-e4434b16c4c0/Med-VM16.vmdk
+2020-06-04 11:09:51,862 - vcst.pyvmomi.vm.xclustervmotion - INFO - Perform get_obj
+2020-06-04 11:09:59,691 - vcst.pyvmomi.vm.xclustervmotion - INFO - Perform construct_locator
+2020-06-04 11:09:59,692 - vcst.pyvmomi.vm.xclustervmotion - INFO - relocate index:0
+2020-06-04 11:09:59,724 - vcst.pyvmomi.vm.xclustervmotion - INFO - disk:(vim.vm.device.VirtualDisk) {
+   dynamicType = <unset>,
+   dynamicProperty = (vmodl.DynamicProperty) [],
+   key = 2000,
+   deviceInfo = (vim.Description) {
+      dynamicType = <unset>,
+      dynamicProperty = (vmodl.DynamicProperty) [],
+      label = 'Hard disk 1',
+      summary = '41,943,040 KB'
+   },
+   backing = (vim.vm.device.VirtualDisk.FlatVer2BackingInfo) {
+      dynamicType = <unset>,
+      dynamicProperty = (vmodl.DynamicProperty) [],
+      fileName = '[ClusterC_vsan_ds] ba9fbf5e-76f0-3873-6098-e4434b16c4c0/Med-VM16.vmdk',
+      datastore = 'vim.Datastore:datastore-34450',
+      backingObjectId = '2ea0bf5e-1e7f-488d-6647-246e96d73d94',
+      diskMode = 'persistent',
+      split = false,
+      writeThrough = false,
+      thinProvisioned = true,
+      eagerlyScrub = false,
+      uuid = '6000C299-42aa-df65-63c4-274c37ed2fa6',
+      contentId = '94e327cdf4cffe0d43c5cf794b5f3946',
+      changeId = <unset>,
+      parent = <unset>,
+      deltaDiskFormat = <unset>,
+      digestEnabled = false,
+      deltaGrainSize = <unset>,
+      deltaDiskFormatVariant = <unset>,
+      sharing = 'sharingNone',
+      keyId = <unset>
+   },
+   connectable = <unset>,
+   slotInfo = <unset>,
+   controllerKey = 1000,
+   unitNumber = 0,
+   capacityInKB = 41943040,
+   capacityInBytes = 42949672960,
+   shares = (vim.SharesInfo) {
+      dynamicType = <unset>,
+      dynamicProperty = (vmodl.DynamicProperty) [],
+      shares = 1000,
+      level = 'normal'
+   },
+   storageIOAllocation = (vim.StorageResourceManager.IOAllocationInfo) {
+      dynamicType = <unset>,
+      dynamicProperty = (vmodl.DynamicProperty) [],
+      limit = -1,
+      shares = (vim.SharesInfo) {
+         dynamicType = <unset>,
+         dynamicProperty = (vmodl.DynamicProperty) [],
+         shares = 1000,
+         level = 'normal'
+      },
+      reservation = 0
+   },
+   diskObjectId = '1-2000',
+   vFlashCacheConfigInfo = <unset>,
+   iofilter = (str) [],
+   vDiskId = <unset>,
+   nativeUnmanagedLinkedClone = false
+}
+2020-06-04 11:09:59,763 - vcst.pyvmomi.vm.xclustervmotion - INFO - drive:ClusterC_vsan_ds
+2020-06-04 11:09:59,803 - vcst.pyvmomi.vm.xclustervmotion - INFO - wdisk.backing.fileName:[ClusterC_vsan_ds] ba9fbf5e-76f0-3873-6098-e4434b16c4c0/Med-VM16.vmdk
+2020-06-04 11:10:00,028 - vcst.pyvmomi.vm.xclustervmotion - INFO - Perform wait_for_task
+2020-06-04 11:10:05,989 - vcst.pyvmomi.vm.xclustervmotion - INFO - Task completed successfully
+2020-06-04 11:10:06,227 - vcst.pyvmomi.vm.xclustervmotion - INFO - Perform testCleanup
+2020-06-05 21:58:43,532 - vcst.pyvmomi.vm.generic_vmotion - INFO - Perform __init__
+2020-06-05 21:58:43,533 - vcst.pyvmomi.vm.generic_vmotion - INFO - No vm name provided, please set environment variable testvm
+2020-06-05 21:58:43,565 - vcst.pyvmomi.vm.generic_vmotion - INFO - Perform testSetup
+2020-06-05 21:58:43,591 - vcst.pyvmomi.vm.generic_vmotion - INFO - Perform get_vc_session
+2020-06-05 21:58:43,597 - vcst.pyvmomi.vm.generic_vmotion - ERROR - Failed in get_vc_session: 'Test' object has no attribute 'username'
+2020-06-05 21:58:43,623 - vcst.pyvmomi.vm.generic_vmotion - ERROR - 
+Traceback (most recent call last):
+  File "C:\GIT\minions\vcst\pyvmomi\vm\generic_vmotion_run.py", line 74, in get_vc_session
+    si = SmartConnectNoSSL(host=self.vc, user=self.username, pwd=self.password, port=self.port)
+AttributeError: 'Test' object has no attribute 'username'
+2020-06-05 21:58:43,658 - vcst.pyvmomi.vm.generic_vmotion - INFO - Authentication failed
+2020-06-05 22:01:14,321 - vcst.pyvmomi.vm.generic_vmotion - INFO - Perform __init__
+2020-06-05 22:01:14,322 - vcst.pyvmomi.vm.generic_vmotion - INFO - No vm name provided, please set environment variable testvm
+2020-06-05 22:01:14,343 - vcst.pyvmomi.vm.generic_vmotion - INFO - Perform testSetup
+2020-06-05 22:01:14,351 - vcst.pyvmomi.vm.generic_vmotion - INFO - Perform get_vc_session
+2020-06-05 22:01:14,365 - vcst.pyvmomi.vm.generic_vmotion - ERROR - Failed in get_vc_session: 'Test' object has no attribute 'username'
+2020-06-05 22:01:14,384 - vcst.pyvmomi.vm.generic_vmotion - ERROR - 
+Traceback (most recent call last):
+  File "C:\GIT\minions\vcst\pyvmomi\vm\generic_vmotion_run.py", line 74, in get_vc_session
+    si = SmartConnectNoSSL(host=self.vc, user=self.username, pwd=self.password, port=self.port)
+AttributeError: 'Test' object has no attribute 'username'
+2020-06-05 22:01:14,405 - vcst.pyvmomi.vm.generic_vmotion - INFO - Authentication failed
+2020-06-05 22:08:12,130 - vcst.pyvmomi.vm.generic_vmotion - INFO - Perform __init__
+2020-06-05 22:08:12,130 - vcst.pyvmomi.vm.generic_vmotion - INFO - No vm name provided, please set environment variable testvm
+2020-06-05 22:08:12,166 - vcst.pyvmomi.vm.generic_vmotion - INFO - Perform testSetup
+2020-06-05 22:08:59,811 - vcst.pyvmomi.vm.generic_vmotion - INFO - Perform __init__
+2020-06-05 22:08:59,811 - vcst.pyvmomi.vm.generic_vmotion - INFO - No vm name provided, please set environment variable testvm
+2020-06-05 22:08:59,842 - vcst.pyvmomi.vm.generic_vmotion - INFO - Perform testSetup
+2020-06-05 22:08:59,864 - vcst.pyvmomi.vm.generic_vmotion - INFO - Invalid test paramaeters
+2020-06-05 22:09:33,045 - vcst.pyvmomi.vm.generic_vmotion - INFO - Perform __init__
+2020-06-05 22:09:33,046 - vcst.pyvmomi.vm.generic_vmotion - INFO - Perform decide_vMotion_Type
+2020-06-05 22:09:33,072 - vcst.pyvmomi.vm.generic_vmotion - INFO - ERROR: Invalid vMotion type. Please provide at least desthost or destdatastore or both
+2020-06-05 22:09:33,104 - vcst.pyvmomi.vm.generic_vmotion - INFO - Perform testSetup
+2020-06-05 22:09:33,118 - vcst.pyvmomi.vm.generic_vmotion - INFO - Invalid test paramaeters
+2020-06-05 22:10:51,653 - vcst.pyvmomi.vm.generic_vmotion - INFO - Perform __init__
+2020-06-05 22:10:51,653 - vcst.pyvmomi.vm.generic_vmotion - INFO - Perform decide_vMotion_Type
+2020-06-05 22:10:51,673 - vcst.pyvmomi.vm.generic_vmotion - INFO - Finished  __init__
+2020-06-05 22:10:51,701 - vcst.pyvmomi.vm.generic_vmotion - INFO - Perform testSetup
+2020-06-05 22:10:51,726 - vcst.pyvmomi.vm.generic_vmotion - INFO - Perform get_vc_session
+2020-06-05 22:10:53,792 - vcst.pyvmomi.vm.generic_vmotion - INFO - Finished  get_vc_session
+2020-06-05 22:10:54,014 - vcst.pyvmomi.vm.generic_vmotion - INFO - Perform testTask
+2020-06-05 22:10:54,038 - vcst.pyvmomi.vm.generic_vmotion - INFO - Perform vmotion_vm
+2020-06-05 22:10:54,043 - vcst.pyvmomi.vm.generic_vmotion - INFO - Search VM to be vmotioned YSBTestVM-1
+2020-06-05 22:10:54,065 - vcst.pyvmomi.vm.generic_vmotion - INFO - Perform get_obj
+2020-06-05 22:10:55,394 - vcst.pyvmomi.vm.generic_vmotion - INFO - VM Found
+2020-06-05 22:10:55,395 - vcst.pyvmomi.vm.generic_vmotion - INFO - Search dest host sc2-hs1-b2813.eng.vmware.com
+2020-06-05 22:10:55,426 - vcst.pyvmomi.vm.generic_vmotion - INFO - Perform get_obj
+2020-06-05 22:10:56,330 - vcst.pyvmomi.vm.generic_vmotion - INFO - Dest host found
+2020-06-05 22:10:56,548 - vcst.pyvmomi.vm.generic_vmotion - INFO - Migrating YSBTestVM-1 to destination host sc2-hs1-b2813.eng.vmware.com
+2020-06-05 22:10:56,768 - vcst.pyvmomi.vm.generic_vmotion - INFO - Perform wait_for_task
+2020-06-05 22:11:01,987 - vcst.pyvmomi.vm.generic_vmotion - INFO - (vim.TaskInfo) {
+   dynamicType = <unset>,
+   dynamicProperty = (vmodl.DynamicProperty) [],
+   key = 'task-45245',
+   task = 'vim.Task:task-45245',
+   description = (vmodl.LocalizableMessage) {
+      dynamicType = <unset>,
+      dynamicProperty = (vmodl.DynamicProperty) [],
+      key = 'com.vmware.vim.vpxd.vpx.vmprov.CheckCompatibility',
+      arg = (vmodl.KeyAnyValue) [],
+      message = 'Checking compatibility of the Virtual Machine'
+   },
+   name = vim.VirtualMachine.Migrate,
+   descriptionId = 'VirtualMachine.migrate',
+   entity = 'vim.VirtualMachine:vm-36350',
+   entityName = 'YSBTestVM-1',
+   locked = (vim.ManagedEntity) [],
+   state = 'error',
+   cancelled = false,
+   cancelable = false,
+   error = (vim.fault.HAErrorsAtDest) {
+      dynamicType = <unset>,
+      dynamicProperty = (vmodl.DynamicProperty) [],
+      msg = 'The host is reporting errors in its attempts to provide vSphere HA support.',
+      faultCause = <unset>,
+      faultMessage = (vmodl.LocalizableMessage) []
+   },
+   result = <unset>,
+   progress = <unset>,
+   reason = (vim.TaskReasonUser) {
+      dynamicType = <unset>,
+      dynamicProperty = (vmodl.DynamicProperty) [],
+      userName = 'SKYSCRAPER.LOCAL\\Administrator'
+   },
+   queueTime = 2020-06-05T16:41:15.131746Z,
+   startTime = 2020-06-05T16:41:15.134865Z,
+   completeTime = 2020-06-05T16:41:15.864063Z,
+   eventChainId = 2363983,
+   changeTag = <unset>,
+   parentTaskKey = <unset>,
+   rootTaskKey = <unset>,
+   activationId = <unset>
+}
+2020-06-05 22:11:02,492 - vcst.pyvmomi.vm.generic_vmotion - INFO - Task failed
+2020-06-05 22:11:02,710 - vcst.pyvmomi.vm.generic_vmotion - INFO - (vim.TaskInfo) {
+   dynamicType = <unset>,
+   dynamicProperty = (vmodl.DynamicProperty) [],
+   key = 'task-45245',
+   task = 'vim.Task:task-45245',
+   description = (vmodl.LocalizableMessage) {
+      dynamicType = <unset>,
+      dynamicProperty = (vmodl.DynamicProperty) [],
+      key = 'com.vmware.vim.vpxd.vpx.vmprov.CheckCompatibility',
+      arg = (vmodl.KeyAnyValue) [],
+      message = 'Checking compatibility of the Virtual Machine'
+   },
+   name = vim.VirtualMachine.Migrate,
+   descriptionId = 'VirtualMachine.migrate',
+   entity = 'vim.VirtualMachine:vm-36350',
+   entityName = 'YSBTestVM-1',
+   locked = (vim.ManagedEntity) [],
+   state = 'error',
+   cancelled = false,
+   cancelable = false,
+   error = (vim.fault.HAErrorsAtDest) {
+      dynamicType = <unset>,
+      dynamicProperty = (vmodl.DynamicProperty) [],
+      msg = 'The host is reporting errors in its attempts to provide vSphere HA support.',
+      faultCause = <unset>,
+      faultMessage = (vmodl.LocalizableMessage) []
+   },
+   result = <unset>,
+   progress = <unset>,
+   reason = (vim.TaskReasonUser) {
+      dynamicType = <unset>,
+      dynamicProperty = (vmodl.DynamicProperty) [],
+      userName = 'SKYSCRAPER.LOCAL\\Administrator'
+   },
+   queueTime = 2020-06-05T16:41:15.131746Z,
+   startTime = 2020-06-05T16:41:15.134865Z,
+   completeTime = 2020-06-05T16:41:15.864063Z,
+   eventChainId = 2363983,
+   changeTag = <unset>,
+   parentTaskKey = <unset>,
+   rootTaskKey = <unset>,
+   activationId = <unset>
+}
+2020-06-05 22:11:02,765 - vcst.pyvmomi.vm.generic_vmotion - INFO - Finished  vmotion_vm
+2020-06-05 22:11:02,773 - vcst.pyvmomi.vm.generic_vmotion - INFO - Perform testCleanup
+2020-06-05 22:14:06,349 - vcst.pyvmomi.vm.generic_vmotion - INFO - Perform __init__
+2020-06-05 22:14:06,350 - vcst.pyvmomi.vm.generic_vmotion - INFO - Perform decide_vMotion_Type
+2020-06-05 22:14:06,380 - vcst.pyvmomi.vm.generic_vmotion - INFO - Finished  __init__
+2020-06-05 22:14:06,417 - vcst.pyvmomi.vm.generic_vmotion - INFO - Perform testSetup
+2020-06-05 22:14:06,426 - vcst.pyvmomi.vm.generic_vmotion - INFO - Perform get_vc_session
+2020-06-05 22:14:08,525 - vcst.pyvmomi.vm.generic_vmotion - INFO - Finished  get_vc_session
+2020-06-05 22:14:08,750 - vcst.pyvmomi.vm.generic_vmotion - INFO - Perform testTask
+2020-06-05 22:14:08,782 - vcst.pyvmomi.vm.generic_vmotion - INFO - Perform vmotion_vm
+2020-06-05 22:14:08,787 - vcst.pyvmomi.vm.generic_vmotion - INFO - Search VM to be vmotioned YSBTestVM-1
+2020-06-05 22:14:08,815 - vcst.pyvmomi.vm.generic_vmotion - INFO - Perform get_obj
+2020-06-05 22:14:10,168 - vcst.pyvmomi.vm.generic_vmotion - INFO - VM Found
+2020-06-05 22:14:10,168 - vcst.pyvmomi.vm.generic_vmotion - INFO - Search dest host sc2-hs1-b2813.eng.vmware.com
+2020-06-05 22:14:10,196 - vcst.pyvmomi.vm.generic_vmotion - INFO - Perform get_obj
+2020-06-05 22:14:11,088 - vcst.pyvmomi.vm.generic_vmotion - INFO - Dest host found
+2020-06-05 22:14:11,308 - vcst.pyvmomi.vm.generic_vmotion - INFO - Migrating YSBTestVM-1 to destination host sc2-hs1-b2813.eng.vmware.com
+2020-06-05 22:14:11,533 - vcst.pyvmomi.vm.generic_vmotion - INFO - Perform wait_for_task
+2020-06-05 22:14:16,756 - vcst.pyvmomi.vm.generic_vmotion - INFO - (vim.TaskInfo) {
+   dynamicType = <unset>,
+   dynamicProperty = (vmodl.DynamicProperty) [],
+   key = 'task-45248',
+   task = 'vim.Task:task-45248',
+   description = (vmodl.LocalizableMessage) {
+      dynamicType = <unset>,
+      dynamicProperty = (vmodl.DynamicProperty) [],
+      key = 'com.vmware.vim.vpxd.vpx.vmprov.CheckCompatibility',
+      arg = (vmodl.KeyAnyValue) [],
+      message = 'Checking compatibility of the Virtual Machine'
+   },
+   name = vim.VirtualMachine.Migrate,
+   descriptionId = 'VirtualMachine.migrate',
+   entity = 'vim.VirtualMachine:vm-36350',
+   entityName = 'YSBTestVM-1',
+   locked = (vim.ManagedEntity) [],
+   state = 'error',
+   cancelled = false,
+   cancelable = false,
+   error = (vim.fault.HAErrorsAtDest) {
+      dynamicType = <unset>,
+      dynamicProperty = (vmodl.DynamicProperty) [],
+      msg = 'The host is reporting errors in its attempts to provide vSphere HA support.',
+      faultCause = <unset>,
+      faultMessage = (vmodl.LocalizableMessage) []
+   },
+   result = <unset>,
+   progress = <unset>,
+   reason = (vim.TaskReasonUser) {
+      dynamicType = <unset>,
+      dynamicProperty = (vmodl.DynamicProperty) [],
+      userName = 'SKYSCRAPER.LOCAL\\Administrator'
+   },
+   queueTime = 2020-06-05T16:44:29.896297Z,
+   startTime = 2020-06-05T16:44:29.899296Z,
+   completeTime = 2020-06-05T16:44:29.934795Z,
+   eventChainId = 2364309,
+   changeTag = <unset>,
+   parentTaskKey = <unset>,
+   rootTaskKey = <unset>,
+   activationId = <unset>
+}
+2020-06-05 22:14:17,246 - vcst.pyvmomi.vm.generic_vmotion - INFO - Task failed
+2020-06-05 22:14:17,466 - vcst.pyvmomi.vm.generic_vmotion - INFO - (vim.TaskInfo) {
+   dynamicType = <unset>,
+   dynamicProperty = (vmodl.DynamicProperty) [],
+   key = 'task-45248',
+   task = 'vim.Task:task-45248',
+   description = (vmodl.LocalizableMessage) {
+      dynamicType = <unset>,
+      dynamicProperty = (vmodl.DynamicProperty) [],
+      key = 'com.vmware.vim.vpxd.vpx.vmprov.CheckCompatibility',
+      arg = (vmodl.KeyAnyValue) [],
+      message = 'Checking compatibility of the Virtual Machine'
+   },
+   name = vim.VirtualMachine.Migrate,
+   descriptionId = 'VirtualMachine.migrate',
+   entity = 'vim.VirtualMachine:vm-36350',
+   entityName = 'YSBTestVM-1',
+   locked = (vim.ManagedEntity) [],
+   state = 'error',
+   cancelled = false,
+   cancelable = false,
+   error = (vim.fault.HAErrorsAtDest) {
+      dynamicType = <unset>,
+      dynamicProperty = (vmodl.DynamicProperty) [],
+      msg = 'The host is reporting errors in its attempts to provide vSphere HA support.',
+      faultCause = <unset>,
+      faultMessage = (vmodl.LocalizableMessage) []
+   },
+   result = <unset>,
+   progress = <unset>,
+   reason = (vim.TaskReasonUser) {
+      dynamicType = <unset>,
+      dynamicProperty = (vmodl.DynamicProperty) [],
+      userName = 'SKYSCRAPER.LOCAL\\Administrator'
+   },
+   queueTime = 2020-06-05T16:44:29.896297Z,
+   startTime = 2020-06-05T16:44:29.899296Z,
+   completeTime = 2020-06-05T16:44:29.934795Z,
+   eventChainId = 2364309,
+   changeTag = <unset>,
+   parentTaskKey = <unset>,
+   rootTaskKey = <unset>,
+   activationId = <unset>
+}
+2020-06-05 22:14:17,513 - vcst.pyvmomi.vm.generic_vmotion - INFO - Finished  vmotion_vm
+2020-06-05 22:14:17,520 - vcst.pyvmomi.vm.generic_vmotion - INFO - Perform testCleanup
+2020-06-05 22:24:33,526 - vcst.pyvmomi.vm.generic_vmotion - INFO - Perform __init__
+2020-06-05 22:24:33,526 - vcst.pyvmomi.vm.generic_vmotion - INFO - Perform decide_vMotion_Type
+2020-06-05 22:24:33,530 - vcst.pyvmomi.vm.generic_vmotion - INFO - Finished  __init__
+2020-06-05 22:24:33,559 - vcst.pyvmomi.vm.generic_vmotion - INFO - Perform testSetup
+2020-06-05 22:24:33,579 - vcst.pyvmomi.vm.generic_vmotion - INFO - Perform get_vc_session
+2020-06-05 22:24:35,654 - vcst.pyvmomi.vm.generic_vmotion - INFO - Finished  get_vc_session
+2020-06-05 22:24:35,876 - vcst.pyvmomi.vm.generic_vmotion - INFO - Perform testTask
+2020-06-05 22:24:35,905 - vcst.pyvmomi.vm.generic_vmotion - INFO - Perform vmotion_vm
+2020-06-05 22:24:35,910 - vcst.pyvmomi.vm.generic_vmotion - INFO - Search VM to be vmotioned iclone-1168-1582737625602
+2020-06-05 22:24:35,934 - vcst.pyvmomi.vm.generic_vmotion - INFO - Perform get_obj
+2020-06-05 22:24:40,781 - vcst.pyvmomi.vm.generic_vmotion - INFO - VM Found
+2020-06-05 22:24:40,781 - vcst.pyvmomi.vm.generic_vmotion - INFO - Search dest host sc2-hs1-b2816.eng.vmware.com
+2020-06-05 22:24:40,808 - vcst.pyvmomi.vm.generic_vmotion - INFO - Perform get_obj
+2020-06-05 22:24:41,469 - vcst.pyvmomi.vm.generic_vmotion - INFO - Dest host found
+2020-06-05 22:24:41,687 - vcst.pyvmomi.vm.generic_vmotion - INFO - Migrating iclone-1168-1582737625602 to destination host sc2-hs1-b2816.eng.vmware.com
+2020-06-05 22:24:41,909 - vcst.pyvmomi.vm.generic_vmotion - INFO - Perform wait_for_task
+2020-06-05 22:24:47,130 - vcst.pyvmomi.vm.generic_vmotion - INFO - (vim.TaskInfo) {
+   dynamicType = <unset>,
+   dynamicProperty = (vmodl.DynamicProperty) [],
+   key = 'task-45251',
+   task = 'vim.Task:task-45251',
+   description = (vmodl.LocalizableMessage) {
+      dynamicType = <unset>,
+      dynamicProperty = (vmodl.DynamicProperty) [],
+      key = 'com.vmware.vim.vpxd.vpx.vmprov.InitiateSource',
+      arg = (vmodl.KeyAnyValue) [],
+      message = 'Migrating Virtual Machine active state'
+   },
+   name = vim.VirtualMachine.Migrate,
+   descriptionId = 'VirtualMachine.migrate',
+   entity = 'vim.VirtualMachine:vm-36154',
+   entityName = 'iclone-1168-1582737625602',
+   locked = (vim.ManagedEntity) [],
+   state = 'running',
+   cancelled = false,
+   cancelable = true,
+   error = <unset>,
+   result = <unset>,
+   progress = 20,
+   reason = (vim.TaskReasonUser) {
+      dynamicType = <unset>,
+      dynamicProperty = (vmodl.DynamicProperty) [],
+      userName = 'SKYSCRAPER.LOCAL\\Administrator'
+   },
+   queueTime = 2020-06-05T16:55:00.27815Z,
+   startTime = 2020-06-05T16:55:00.280332Z,
+   completeTime = <unset>,
+   eventChainId = 2365423,
+   changeTag = <unset>,
+   parentTaskKey = <unset>,
+   rootTaskKey = <unset>,
+   activationId = <unset>
+}
+2020-06-05 22:24:52,869 - vcst.pyvmomi.vm.generic_vmotion - INFO - (vim.TaskInfo) {
+   dynamicType = <unset>,
+   dynamicProperty = (vmodl.DynamicProperty) [],
+   key = 'task-45251',
+   task = 'vim.Task:task-45251',
+   description = (vmodl.LocalizableMessage) {
+      dynamicType = <unset>,
+      dynamicProperty = (vmodl.DynamicProperty) [],
+      key = 'com.vmware.vim.vpxd.vpx.vmprov.InitiateSource',
+      arg = (vmodl.KeyAnyValue) [],
+      message = 'Migrating Virtual Machine active state'
+   },
+   name = vim.VirtualMachine.Migrate,
+   descriptionId = 'VirtualMachine.migrate',
+   entity = 'vim.VirtualMachine:vm-36154',
+   entityName = 'iclone-1168-1582737625602',
+   locked = (vim.ManagedEntity) [],
+   state = 'running',
+   cancelled = false,
+   cancelable = true,
+   error = <unset>,
+   result = <unset>,
+   progress = 20,
+   reason = (vim.TaskReasonUser) {
+      dynamicType = <unset>,
+      dynamicProperty = (vmodl.DynamicProperty) [],
+      userName = 'SKYSCRAPER.LOCAL\\Administrator'
+   },
+   queueTime = 2020-06-05T16:55:00.27815Z,
+   startTime = 2020-06-05T16:55:00.280332Z,
+   completeTime = <unset>,
+   eventChainId = 2365423,
+   changeTag = <unset>,
+   parentTaskKey = <unset>,
+   rootTaskKey = <unset>,
+   activationId = <unset>
+}
+2020-06-05 22:24:58,574 - vcst.pyvmomi.vm.generic_vmotion - INFO - (vim.TaskInfo) {
+   dynamicType = <unset>,
+   dynamicProperty = (vmodl.DynamicProperty) [],
+   key = 'task-45251',
+   task = 'vim.Task:task-45251',
+   description = (vmodl.LocalizableMessage) {
+      dynamicType = <unset>,
+      dynamicProperty = (vmodl.DynamicProperty) [],
+      key = 'com.vmware.vim.vpxd.vpx.vmprov.InitiateSource',
+      arg = (vmodl.KeyAnyValue) [],
+      message = 'Migrating Virtual Machine active state'
+   },
+   name = vim.VirtualMachine.Migrate,
+   descriptionId = 'VirtualMachine.migrate',
+   entity = 'vim.VirtualMachine:vm-36154',
+   entityName = 'iclone-1168-1582737625602',
+   locked = (vim.ManagedEntity) [],
+   state = 'running',
+   cancelled = false,
+   cancelable = true,
+   error = <unset>,
+   result = <unset>,
+   progress = 20,
+   reason = (vim.TaskReasonUser) {
+      dynamicType = <unset>,
+      dynamicProperty = (vmodl.DynamicProperty) [],
+      userName = 'SKYSCRAPER.LOCAL\\Administrator'
+   },
+   queueTime = 2020-06-05T16:55:00.27815Z,
+   startTime = 2020-06-05T16:55:00.280332Z,
+   completeTime = <unset>,
+   eventChainId = 2365423,
+   changeTag = <unset>,
+   parentTaskKey = <unset>,
+   rootTaskKey = <unset>,
+   activationId = <unset>
+}
+2020-06-05 22:25:04,347 - vcst.pyvmomi.vm.generic_vmotion - INFO - (vim.TaskInfo) {
+   dynamicType = <unset>,
+   dynamicProperty = (vmodl.DynamicProperty) [],
+   key = 'task-45251',
+   task = 'vim.Task:task-45251',
+   description = (vmodl.LocalizableMessage) {
+      dynamicType = <unset>,
+      dynamicProperty = (vmodl.DynamicProperty) [],
+      key = 'com.vmware.vim.vpxd.vpx.vmprov.InitiateSource',
+      arg = (vmodl.KeyAnyValue) [],
+      message = 'Migrating Virtual Machine active state'
+   },
+   name = vim.VirtualMachine.Migrate,
+   descriptionId = 'VirtualMachine.migrate',
+   entity = 'vim.VirtualMachine:vm-36154',
+   entityName = 'iclone-1168-1582737625602',
+   locked = (vim.ManagedEntity) [],
+   state = 'running',
+   cancelled = false,
+   cancelable = true,
+   error = <unset>,
+   result = <unset>,
+   progress = 20,
+   reason = (vim.TaskReasonUser) {
+      dynamicType = <unset>,
+      dynamicProperty = (vmodl.DynamicProperty) [],
+      userName = 'SKYSCRAPER.LOCAL\\Administrator'
+   },
+   queueTime = 2020-06-05T16:55:00.27815Z,
+   startTime = 2020-06-05T16:55:00.280332Z,
+   completeTime = <unset>,
+   eventChainId = 2365423,
+   changeTag = <unset>,
+   parentTaskKey = <unset>,
+   rootTaskKey = <unset>,
+   activationId = <unset>
+}
+2020-06-05 22:25:10,058 - vcst.pyvmomi.vm.generic_vmotion - INFO - (vim.TaskInfo) {
+   dynamicType = <unset>,
+   dynamicProperty = (vmodl.DynamicProperty) [],
+   key = 'task-45251',
+   task = 'vim.Task:task-45251',
+   description = (vmodl.LocalizableMessage) {
+      dynamicType = <unset>,
+      dynamicProperty = (vmodl.DynamicProperty) [],
+      key = 'com.vmware.vim.vpxd.vpx.vmprov.InitiateSource',
+      arg = (vmodl.KeyAnyValue) [],
+      message = 'Migrating Virtual Machine active state'
+   },
+   name = vim.VirtualMachine.Migrate,
+   descriptionId = 'VirtualMachine.migrate',
+   entity = 'vim.VirtualMachine:vm-36154',
+   entityName = 'iclone-1168-1582737625602',
+   locked = (vim.ManagedEntity) [],
+   state = 'running',
+   cancelled = false,
+   cancelable = true,
+   error = <unset>,
+   result = <unset>,
+   progress = 20,
+   reason = (vim.TaskReasonUser) {
+      dynamicType = <unset>,
+      dynamicProperty = (vmodl.DynamicProperty) [],
+      userName = 'SKYSCRAPER.LOCAL\\Administrator'
+   },
+   queueTime = 2020-06-05T16:55:00.27815Z,
+   startTime = 2020-06-05T16:55:00.280332Z,
+   completeTime = <unset>,
+   eventChainId = 2365423,
+   changeTag = <unset>,
+   parentTaskKey = <unset>,
+   rootTaskKey = <unset>,
+   activationId = <unset>
+}
+2020-06-05 22:25:15,759 - vcst.pyvmomi.vm.generic_vmotion - INFO - (vim.TaskInfo) {
+   dynamicType = <unset>,
+   dynamicProperty = (vmodl.DynamicProperty) [],
+   key = 'task-45251',
+   task = 'vim.Task:task-45251',
+   description = (vmodl.LocalizableMessage) {
+      dynamicType = <unset>,
+      dynamicProperty = (vmodl.DynamicProperty) [],
+      key = 'com.vmware.vim.vpxd.vpx.vmprov.InitiateSource',
+      arg = (vmodl.KeyAnyValue) [],
+      message = 'Migrating Virtual Machine active state'
+   },
+   name = vim.VirtualMachine.Migrate,
+   descriptionId = 'VirtualMachine.migrate',
+   entity = 'vim.VirtualMachine:vm-36154',
+   entityName = 'iclone-1168-1582737625602',
+   locked = (vim.ManagedEntity) [],
+   state = 'running',
+   cancelled = false,
+   cancelable = true,
+   error = <unset>,
+   result = <unset>,
+   progress = 20,
+   reason = (vim.TaskReasonUser) {
+      dynamicType = <unset>,
+      dynamicProperty = (vmodl.DynamicProperty) [],
+      userName = 'SKYSCRAPER.LOCAL\\Administrator'
+   },
+   queueTime = 2020-06-05T16:55:00.27815Z,
+   startTime = 2020-06-05T16:55:00.280332Z,
+   completeTime = <unset>,
+   eventChainId = 2365423,
+   changeTag = <unset>,
+   parentTaskKey = <unset>,
+   rootTaskKey = <unset>,
+   activationId = <unset>
+}
+2020-06-05 22:25:21,484 - vcst.pyvmomi.vm.generic_vmotion - INFO - (vim.TaskInfo) {
+   dynamicType = <unset>,
+   dynamicProperty = (vmodl.DynamicProperty) [],
+   key = 'task-45251',
+   task = 'vim.Task:task-45251',
+   description = (vmodl.LocalizableMessage) {
+      dynamicType = <unset>,
+      dynamicProperty = (vmodl.DynamicProperty) [],
+      key = 'com.vmware.vim.vpxd.vpx.vmprov.InitiateSource',
+      arg = (vmodl.KeyAnyValue) [],
+      message = 'Migrating Virtual Machine active state'
+   },
+   name = vim.VirtualMachine.Migrate,
+   descriptionId = 'VirtualMachine.migrate',
+   entity = 'vim.VirtualMachine:vm-36154',
+   entityName = 'iclone-1168-1582737625602',
+   locked = (vim.ManagedEntity) [],
+   state = 'running',
+   cancelled = false,
+   cancelable = true,
+   error = <unset>,
+   result = <unset>,
+   progress = 20,
+   reason = (vim.TaskReasonUser) {
+      dynamicType = <unset>,
+      dynamicProperty = (vmodl.DynamicProperty) [],
+      userName = 'SKYSCRAPER.LOCAL\\Administrator'
+   },
+   queueTime = 2020-06-05T16:55:00.27815Z,
+   startTime = 2020-06-05T16:55:00.280332Z,
+   completeTime = <unset>,
+   eventChainId = 2365423,
+   changeTag = <unset>,
+   parentTaskKey = <unset>,
+   rootTaskKey = <unset>,
+   activationId = <unset>
+}
+2020-06-05 22:25:27,195 - vcst.pyvmomi.vm.generic_vmotion - INFO - (vim.TaskInfo) {
+   dynamicType = <unset>,
+   dynamicProperty = (vmodl.DynamicProperty) [],
+   key = 'task-45251',
+   task = 'vim.Task:task-45251',
+   description = (vmodl.LocalizableMessage) {
+      dynamicType = <unset>,
+      dynamicProperty = (vmodl.DynamicProperty) [],
+      key = 'com.vmware.vim.vpxd.vpx.vmprov.InitiateSource',
+      arg = (vmodl.KeyAnyValue) [],
+      message = 'Migrating Virtual Machine active state'
+   },
+   name = vim.VirtualMachine.Migrate,
+   descriptionId = 'VirtualMachine.migrate',
+   entity = 'vim.VirtualMachine:vm-36154',
+   entityName = 'iclone-1168-1582737625602',
+   locked = (vim.ManagedEntity) [],
+   state = 'running',
+   cancelled = false,
+   cancelable = true,
+   error = <unset>,
+   result = <unset>,
+   progress = 20,
+   reason = (vim.TaskReasonUser) {
+      dynamicType = <unset>,
+      dynamicProperty = (vmodl.DynamicProperty) [],
+      userName = 'SKYSCRAPER.LOCAL\\Administrator'
+   },
+   queueTime = 2020-06-05T16:55:00.27815Z,
+   startTime = 2020-06-05T16:55:00.280332Z,
+   completeTime = <unset>,
+   eventChainId = 2365423,
+   changeTag = <unset>,
+   parentTaskKey = <unset>,
+   rootTaskKey = <unset>,
+   activationId = <unset>
+}
+2020-06-05 22:25:32,901 - vcst.pyvmomi.vm.generic_vmotion - INFO - (vim.TaskInfo) {
+   dynamicType = <unset>,
+   dynamicProperty = (vmodl.DynamicProperty) [],
+   key = 'task-45251',
+   task = 'vim.Task:task-45251',
+   description = (vmodl.LocalizableMessage) {
+      dynamicType = <unset>,
+      dynamicProperty = (vmodl.DynamicProperty) [],
+      key = 'com.vmware.vim.vpxd.vpx.vmprov.InitiateSource',
+      arg = (vmodl.KeyAnyValue) [],
+      message = 'Migrating Virtual Machine active state'
+   },
+   name = vim.VirtualMachine.Migrate,
+   descriptionId = 'VirtualMachine.migrate',
+   entity = 'vim.VirtualMachine:vm-36154',
+   entityName = 'iclone-1168-1582737625602',
+   locked = (vim.ManagedEntity) [],
+   state = 'running',
+   cancelled = false,
+   cancelable = true,
+   error = <unset>,
+   result = <unset>,
+   progress = 20,
+   reason = (vim.TaskReasonUser) {
+      dynamicType = <unset>,
+      dynamicProperty = (vmodl.DynamicProperty) [],
+      userName = 'SKYSCRAPER.LOCAL\\Administrator'
+   },
+   queueTime = 2020-06-05T16:55:00.27815Z,
+   startTime = 2020-06-05T16:55:00.280332Z,
+   completeTime = <unset>,
+   eventChainId = 2365423,
+   changeTag = <unset>,
+   parentTaskKey = <unset>,
+   rootTaskKey = <unset>,
+   activationId = <unset>
+}
+2020-06-05 22:25:38,605 - vcst.pyvmomi.vm.generic_vmotion - INFO - (vim.TaskInfo) {
+   dynamicType = <unset>,
+   dynamicProperty = (vmodl.DynamicProperty) [],
+   key = 'task-45251',
+   task = 'vim.Task:task-45251',
+   description = (vmodl.LocalizableMessage) {
+      dynamicType = <unset>,
+      dynamicProperty = (vmodl.DynamicProperty) [],
+      key = 'com.vmware.vim.vpxd.vpx.vmprov.InitiateSource',
+      arg = (vmodl.KeyAnyValue) [],
+      message = 'Migrating Virtual Machine active state'
+   },
+   name = vim.VirtualMachine.Migrate,
+   descriptionId = 'VirtualMachine.migrate',
+   entity = 'vim.VirtualMachine:vm-36154',
+   entityName = 'iclone-1168-1582737625602',
+   locked = (vim.ManagedEntity) [],
+   state = 'running',
+   cancelled = false,
+   cancelable = true,
+   error = <unset>,
+   result = <unset>,
+   progress = 20,
+   reason = (vim.TaskReasonUser) {
+      dynamicType = <unset>,
+      dynamicProperty = (vmodl.DynamicProperty) [],
+      userName = 'SKYSCRAPER.LOCAL\\Administrator'
+   },
+   queueTime = 2020-06-05T16:55:00.27815Z,
+   startTime = 2020-06-05T16:55:00.280332Z,
+   completeTime = <unset>,
+   eventChainId = 2365423,
+   changeTag = <unset>,
+   parentTaskKey = <unset>,
+   rootTaskKey = <unset>,
+   activationId = <unset>
+}
+2020-06-05 22:25:44,352 - vcst.pyvmomi.vm.generic_vmotion - INFO - (vim.TaskInfo) {
+   dynamicType = <unset>,
+   dynamicProperty = (vmodl.DynamicProperty) [],
+   key = 'task-45251',
+   task = 'vim.Task:task-45251',
+   description = (vmodl.LocalizableMessage) {
+      dynamicType = <unset>,
+      dynamicProperty = (vmodl.DynamicProperty) [],
+      key = 'com.vmware.vim.vpxd.vpx.vmprov.InitiateSource',
+      arg = (vmodl.KeyAnyValue) [],
+      message = 'Migrating Virtual Machine active state'
+   },
+   name = vim.VirtualMachine.Migrate,
+   descriptionId = 'VirtualMachine.migrate',
+   entity = 'vim.VirtualMachine:vm-36154',
+   entityName = 'iclone-1168-1582737625602',
+   locked = (vim.ManagedEntity) [],
+   state = 'running',
+   cancelled = false,
+   cancelable = true,
+   error = <unset>,
+   result = <unset>,
+   progress = 20,
+   reason = (vim.TaskReasonUser) {
+      dynamicType = <unset>,
+      dynamicProperty = (vmodl.DynamicProperty) [],
+      userName = 'SKYSCRAPER.LOCAL\\Administrator'
+   },
+   queueTime = 2020-06-05T16:55:00.27815Z,
+   startTime = 2020-06-05T16:55:00.280332Z,
+   completeTime = <unset>,
+   eventChainId = 2365423,
+   changeTag = <unset>,
+   parentTaskKey = <unset>,
+   rootTaskKey = <unset>,
+   activationId = <unset>
+}
+2020-06-05 22:25:50,091 - vcst.pyvmomi.vm.generic_vmotion - INFO - (vim.TaskInfo) {
+   dynamicType = <unset>,
+   dynamicProperty = (vmodl.DynamicProperty) [],
+   key = 'task-45251',
+   task = 'vim.Task:task-45251',
+   description = (vmodl.LocalizableMessage) {
+      dynamicType = <unset>,
+      dynamicProperty = (vmodl.DynamicProperty) [],
+      key = 'com.vmware.vim.vpxd.vpx.vmprov.InitiateSource',
+      arg = (vmodl.KeyAnyValue) [],
+      message = 'Migrating Virtual Machine active state'
+   },
+   name = vim.VirtualMachine.Migrate,
+   descriptionId = 'VirtualMachine.migrate',
+   entity = 'vim.VirtualMachine:vm-36154',
+   entityName = 'iclone-1168-1582737625602',
+   locked = (vim.ManagedEntity) [],
+   state = 'running',
+   cancelled = false,
+   cancelable = true,
+   error = <unset>,
+   result = <unset>,
+   progress = 20,
+   reason = (vim.TaskReasonUser) {
+      dynamicType = <unset>,
+      dynamicProperty = (vmodl.DynamicProperty) [],
+      userName = 'SKYSCRAPER.LOCAL\\Administrator'
+   },
+   queueTime = 2020-06-05T16:55:00.27815Z,
+   startTime = 2020-06-05T16:55:00.280332Z,
+   completeTime = <unset>,
+   eventChainId = 2365423,
+   changeTag = <unset>,
+   parentTaskKey = <unset>,
+   rootTaskKey = <unset>,
+   activationId = <unset>
+}
+2020-06-05 22:25:55,803 - vcst.pyvmomi.vm.generic_vmotion - INFO - (vim.TaskInfo) {
+   dynamicType = <unset>,
+   dynamicProperty = (vmodl.DynamicProperty) [],
+   key = 'task-45251',
+   task = 'vim.Task:task-45251',
+   description = (vmodl.LocalizableMessage) {
+      dynamicType = <unset>,
+      dynamicProperty = (vmodl.DynamicProperty) [],
+      key = 'com.vmware.vim.vpxd.vpx.vmprov.InitiateSource',
+      arg = (vmodl.KeyAnyValue) [],
+      message = 'Migrating Virtual Machine active state'
+   },
+   name = vim.VirtualMachine.Migrate,
+   descriptionId = 'VirtualMachine.migrate',
+   entity = 'vim.VirtualMachine:vm-36154',
+   entityName = 'iclone-1168-1582737625602',
+   locked = (vim.ManagedEntity) [],
+   state = 'running',
+   cancelled = false,
+   cancelable = true,
+   error = <unset>,
+   result = <unset>,
+   progress = 20,
+   reason = (vim.TaskReasonUser) {
+      dynamicType = <unset>,
+      dynamicProperty = (vmodl.DynamicProperty) [],
+      userName = 'SKYSCRAPER.LOCAL\\Administrator'
+   },
+   queueTime = 2020-06-05T16:55:00.27815Z,
+   startTime = 2020-06-05T16:55:00.280332Z,
+   completeTime = <unset>,
+   eventChainId = 2365423,
+   changeTag = <unset>,
+   parentTaskKey = <unset>,
+   rootTaskKey = <unset>,
+   activationId = <unset>
+}
+2020-06-05 22:26:01,515 - vcst.pyvmomi.vm.generic_vmotion - INFO - (vim.TaskInfo) {
+   dynamicType = <unset>,
+   dynamicProperty = (vmodl.DynamicProperty) [],
+   key = 'task-45251',
+   task = 'vim.Task:task-45251',
+   description = (vmodl.LocalizableMessage) {
+      dynamicType = <unset>,
+      dynamicProperty = (vmodl.DynamicProperty) [],
+      key = 'com.vmware.vim.vpxd.vpx.vmprov.InitiateSource',
+      arg = (vmodl.KeyAnyValue) [],
+      message = 'Migrating Virtual Machine active state'
+   },
+   name = vim.VirtualMachine.Migrate,
+   descriptionId = 'VirtualMachine.migrate',
+   entity = 'vim.VirtualMachine:vm-36154',
+   entityName = 'iclone-1168-1582737625602',
+   locked = (vim.ManagedEntity) [],
+   state = 'running',
+   cancelled = false,
+   cancelable = true,
+   error = <unset>,
+   result = <unset>,
+   progress = 20,
+   reason = (vim.TaskReasonUser) {
+      dynamicType = <unset>,
+      dynamicProperty = (vmodl.DynamicProperty) [],
+      userName = 'SKYSCRAPER.LOCAL\\Administrator'
+   },
+   queueTime = 2020-06-05T16:55:00.27815Z,
+   startTime = 2020-06-05T16:55:00.280332Z,
+   completeTime = <unset>,
+   eventChainId = 2365423,
+   changeTag = <unset>,
+   parentTaskKey = <unset>,
+   rootTaskKey = <unset>,
+   activationId = <unset>
+}
+2020-06-05 22:26:07,223 - vcst.pyvmomi.vm.generic_vmotion - INFO - (vim.TaskInfo) {
+   dynamicType = <unset>,
+   dynamicProperty = (vmodl.DynamicProperty) [],
+   key = 'task-45251',
+   task = 'vim.Task:task-45251',
+   description = (vmodl.LocalizableMessage) {
+      dynamicType = <unset>,
+      dynamicProperty = (vmodl.DynamicProperty) [],
+      key = 'com.vmware.vim.vpxd.vpx.vmprov.InitiateSource',
+      arg = (vmodl.KeyAnyValue) [],
+      message = 'Migrating Virtual Machine active state'
+   },
+   name = vim.VirtualMachine.Migrate,
+   descriptionId = 'VirtualMachine.migrate',
+   entity = 'vim.VirtualMachine:vm-36154',
+   entityName = 'iclone-1168-1582737625602',
+   locked = (vim.ManagedEntity) [],
+   state = 'running',
+   cancelled = false,
+   cancelable = true,
+   error = <unset>,
+   result = <unset>,
+   progress = 20,
+   reason = (vim.TaskReasonUser) {
+      dynamicType = <unset>,
+      dynamicProperty = (vmodl.DynamicProperty) [],
+      userName = 'SKYSCRAPER.LOCAL\\Administrator'
+   },
+   queueTime = 2020-06-05T16:55:00.27815Z,
+   startTime = 2020-06-05T16:55:00.280332Z,
+   completeTime = <unset>,
+   eventChainId = 2365423,
+   changeTag = <unset>,
+   parentTaskKey = <unset>,
+   rootTaskKey = <unset>,
+   activationId = <unset>
+}
+2020-06-05 22:26:12,931 - vcst.pyvmomi.vm.generic_vmotion - INFO - (vim.TaskInfo) {
+   dynamicType = <unset>,
+   dynamicProperty = (vmodl.DynamicProperty) [],
+   key = 'task-45251',
+   task = 'vim.Task:task-45251',
+   description = (vmodl.LocalizableMessage) {
+      dynamicType = <unset>,
+      dynamicProperty = (vmodl.DynamicProperty) [],
+      key = 'com.vmware.vim.vpxd.vpx.vmprov.InitiateSource',
+      arg = (vmodl.KeyAnyValue) [],
+      message = 'Migrating Virtual Machine active state'
+   },
+   name = vim.VirtualMachine.Migrate,
+   descriptionId = 'VirtualMachine.migrate',
+   entity = 'vim.VirtualMachine:vm-36154',
+   entityName = 'iclone-1168-1582737625602',
+   locked = (vim.ManagedEntity) [],
+   state = 'running',
+   cancelled = false,
+   cancelable = true,
+   error = <unset>,
+   result = <unset>,
+   progress = 20,
+   reason = (vim.TaskReasonUser) {
+      dynamicType = <unset>,
+      dynamicProperty = (vmodl.DynamicProperty) [],
+      userName = 'SKYSCRAPER.LOCAL\\Administrator'
+   },
+   queueTime = 2020-06-05T16:55:00.27815Z,
+   startTime = 2020-06-05T16:55:00.280332Z,
+   completeTime = <unset>,
+   eventChainId = 2365423,
+   changeTag = <unset>,
+   parentTaskKey = <unset>,
+   rootTaskKey = <unset>,
+   activationId = <unset>
+}
+2020-06-05 22:26:18,638 - vcst.pyvmomi.vm.generic_vmotion - INFO - (vim.TaskInfo) {
+   dynamicType = <unset>,
+   dynamicProperty = (vmodl.DynamicProperty) [],
+   key = 'task-45251',
+   task = 'vim.Task:task-45251',
+   description = (vmodl.LocalizableMessage) {
+      dynamicType = <unset>,
+      dynamicProperty = (vmodl.DynamicProperty) [],
+      key = 'com.vmware.vim.vpxd.vpx.vmprov.InitiateSource',
+      arg = (vmodl.KeyAnyValue) [],
+      message = 'Migrating Virtual Machine active state'
+   },
+   name = vim.VirtualMachine.Migrate,
+   descriptionId = 'VirtualMachine.migrate',
+   entity = 'vim.VirtualMachine:vm-36154',
+   entityName = 'iclone-1168-1582737625602',
+   locked = (vim.ManagedEntity) [],
+   state = 'running',
+   cancelled = false,
+   cancelable = true,
+   error = <unset>,
+   result = <unset>,
+   progress = 20,
+   reason = (vim.TaskReasonUser) {
+      dynamicType = <unset>,
+      dynamicProperty = (vmodl.DynamicProperty) [],
+      userName = 'SKYSCRAPER.LOCAL\\Administrator'
+   },
+   queueTime = 2020-06-05T16:55:00.27815Z,
+   startTime = 2020-06-05T16:55:00.280332Z,
+   completeTime = <unset>,
+   eventChainId = 2365423,
+   changeTag = <unset>,
+   parentTaskKey = <unset>,
+   rootTaskKey = <unset>,
+   activationId = <unset>
+}
+2020-06-05 22:26:24,353 - vcst.pyvmomi.vm.generic_vmotion - INFO - (vim.TaskInfo) {
+   dynamicType = <unset>,
+   dynamicProperty = (vmodl.DynamicProperty) [],
+   key = 'task-45251',
+   task = 'vim.Task:task-45251',
+   description = (vmodl.LocalizableMessage) {
+      dynamicType = <unset>,
+      dynamicProperty = (vmodl.DynamicProperty) [],
+      key = 'com.vmware.vim.vpxd.vpx.vmprov.InitiateSource',
+      arg = (vmodl.KeyAnyValue) [],
+      message = 'Migrating Virtual Machine active state'
+   },
+   name = vim.VirtualMachine.Migrate,
+   descriptionId = 'VirtualMachine.migrate',
+   entity = 'vim.VirtualMachine:vm-36154',
+   entityName = 'iclone-1168-1582737625602',
+   locked = (vim.ManagedEntity) [],
+   state = 'running',
+   cancelled = false,
+   cancelable = true,
+   error = <unset>,
+   result = <unset>,
+   progress = 20,
+   reason = (vim.TaskReasonUser) {
+      dynamicType = <unset>,
+      dynamicProperty = (vmodl.DynamicProperty) [],
+      userName = 'SKYSCRAPER.LOCAL\\Administrator'
+   },
+   queueTime = 2020-06-05T16:55:00.27815Z,
+   startTime = 2020-06-05T16:55:00.280332Z,
+   completeTime = <unset>,
+   eventChainId = 2365423,
+   changeTag = <unset>,
+   parentTaskKey = <unset>,
+   rootTaskKey = <unset>,
+   activationId = <unset>
+}
+2020-06-05 22:26:30,055 - vcst.pyvmomi.vm.generic_vmotion - INFO - (vim.TaskInfo) {
+   dynamicType = <unset>,
+   dynamicProperty = (vmodl.DynamicProperty) [],
+   key = 'task-45251',
+   task = 'vim.Task:task-45251',
+   description = (vmodl.LocalizableMessage) {
+      dynamicType = <unset>,
+      dynamicProperty = (vmodl.DynamicProperty) [],
+      key = 'com.vmware.vim.vpxd.vpx.vmprov.InitiateSource',
+      arg = (vmodl.KeyAnyValue) [],
+      message = 'Migrating Virtual Machine active state'
+   },
+   name = vim.VirtualMachine.Migrate,
+   descriptionId = 'VirtualMachine.migrate',
+   entity = 'vim.VirtualMachine:vm-36154',
+   entityName = 'iclone-1168-1582737625602',
+   locked = (vim.ManagedEntity) [],
+   state = 'running',
+   cancelled = false,
+   cancelable = true,
+   error = <unset>,
+   result = <unset>,
+   progress = 20,
+   reason = (vim.TaskReasonUser) {
+      dynamicType = <unset>,
+      dynamicProperty = (vmodl.DynamicProperty) [],
+      userName = 'SKYSCRAPER.LOCAL\\Administrator'
+   },
+   queueTime = 2020-06-05T16:55:00.27815Z,
+   startTime = 2020-06-05T16:55:00.280332Z,
+   completeTime = <unset>,
+   eventChainId = 2365423,
+   changeTag = <unset>,
+   parentTaskKey = <unset>,
+   rootTaskKey = <unset>,
+   activationId = <unset>
+}
+2020-06-05 22:26:35,753 - vcst.pyvmomi.vm.generic_vmotion - INFO - (vim.TaskInfo) {
+   dynamicType = <unset>,
+   dynamicProperty = (vmodl.DynamicProperty) [],
+   key = 'task-45251',
+   task = 'vim.Task:task-45251',
+   description = (vmodl.LocalizableMessage) {
+      dynamicType = <unset>,
+      dynamicProperty = (vmodl.DynamicProperty) [],
+      key = 'com.vmware.vim.vpxd.vpx.vmprov.InitiateSource',
+      arg = (vmodl.KeyAnyValue) [],
+      message = 'Migrating Virtual Machine active state'
+   },
+   name = vim.VirtualMachine.Migrate,
+   descriptionId = 'VirtualMachine.migrate',
+   entity = 'vim.VirtualMachine:vm-36154',
+   entityName = 'iclone-1168-1582737625602',
+   locked = (vim.ManagedEntity) [],
+   state = 'running',
+   cancelled = false,
+   cancelable = true,
+   error = <unset>,
+   result = <unset>,
+   progress = 20,
+   reason = (vim.TaskReasonUser) {
+      dynamicType = <unset>,
+      dynamicProperty = (vmodl.DynamicProperty) [],
+      userName = 'SKYSCRAPER.LOCAL\\Administrator'
+   },
+   queueTime = 2020-06-05T16:55:00.27815Z,
+   startTime = 2020-06-05T16:55:00.280332Z,
+   completeTime = <unset>,
+   eventChainId = 2365423,
+   changeTag = <unset>,
+   parentTaskKey = <unset>,
+   rootTaskKey = <unset>,
+   activationId = <unset>
+}
+2020-06-05 22:26:41,452 - vcst.pyvmomi.vm.generic_vmotion - INFO - (vim.TaskInfo) {
+   dynamicType = <unset>,
+   dynamicProperty = (vmodl.DynamicProperty) [],
+   key = 'task-45251',
+   task = 'vim.Task:task-45251',
+   description = (vmodl.LocalizableMessage) {
+      dynamicType = <unset>,
+      dynamicProperty = (vmodl.DynamicProperty) [],
+      key = 'com.vmware.vim.vpxd.vpx.vmprov.InitiateSource',
+      arg = (vmodl.KeyAnyValue) [],
+      message = 'Migrating Virtual Machine active state'
+   },
+   name = vim.VirtualMachine.Migrate,
+   descriptionId = 'VirtualMachine.migrate',
+   entity = 'vim.VirtualMachine:vm-36154',
+   entityName = 'iclone-1168-1582737625602',
+   locked = (vim.ManagedEntity) [],
+   state = 'running',
+   cancelled = false,
+   cancelable = true,
+   error = <unset>,
+   result = <unset>,
+   progress = 20,
+   reason = (vim.TaskReasonUser) {
+      dynamicType = <unset>,
+      dynamicProperty = (vmodl.DynamicProperty) [],
+      userName = 'SKYSCRAPER.LOCAL\\Administrator'
+   },
+   queueTime = 2020-06-05T16:55:00.27815Z,
+   startTime = 2020-06-05T16:55:00.280332Z,
+   completeTime = <unset>,
+   eventChainId = 2365423,
+   changeTag = <unset>,
+   parentTaskKey = <unset>,
+   rootTaskKey = <unset>,
+   activationId = <unset>
+}
+2020-06-05 22:26:47,163 - vcst.pyvmomi.vm.generic_vmotion - INFO - (vim.TaskInfo) {
+   dynamicType = <unset>,
+   dynamicProperty = (vmodl.DynamicProperty) [],
+   key = 'task-45251',
+   task = 'vim.Task:task-45251',
+   description = (vmodl.LocalizableMessage) {
+      dynamicType = <unset>,
+      dynamicProperty = (vmodl.DynamicProperty) [],
+      key = 'com.vmware.vim.vpxd.vpx.vmprov.InitiateSource',
+      arg = (vmodl.KeyAnyValue) [],
+      message = 'Migrating Virtual Machine active state'
+   },
+   name = vim.VirtualMachine.Migrate,
+   descriptionId = 'VirtualMachine.migrate',
+   entity = 'vim.VirtualMachine:vm-36154',
+   entityName = 'iclone-1168-1582737625602',
+   locked = (vim.ManagedEntity) [],
+   state = 'error',
+   cancelled = false,
+   cancelable = true,
+   error = (vim.fault.GenericVmConfigFault) {
+      dynamicType = <unset>,
+      dynamicProperty = (vmodl.DynamicProperty) [],
+      msg = 'The vMotion failed because the destination host did not receive data from the source host on the vMotion network. Please check your vMotion network settings and physical network configuration and ensure they are correct.',
+      faultCause = <unset>,
+      faultMessage = (vmodl.LocalizableMessage) [
+         (vmodl.LocalizableMessage) {
+            dynamicType = <unset>,
+            dynamicProperty = (vmodl.DynamicProperty) [],
+            key = 'msg.checkpoint.migration.nodata',
+            arg = (vmodl.KeyAnyValue) [],
+            message = 'The vMotion failed because the destination host did not receive data from the source host on the vMotion network. Please check your vMotion network settings and physical network configuration and ensure they are correct.'
+         },
+         (vmodl.LocalizableMessage) {
+            dynamicType = <unset>,
+            dynamicProperty = (vmodl.DynamicProperty) [],
+            key = 'msg.vmotion.connect.failure',
+            arg = (vmodl.KeyAnyValue) [],
+            message = 'The vMotion migrations failed because the ESX hosts were not able to connect over the vMotion network. Check the vMotion network settings and physical network configuration. '
+         },
+         (vmodl.LocalizableMessage) {
+            dynamicType = <unset>,
+            dynamicProperty = (vmodl.DynamicProperty) [],
+            key = 'vob.vmotion.net.send.connect.failed.status',
+            arg = (vmodl.KeyAnyValue) [
+               (vmodl.KeyAnyValue) {
+                  dynamicType = <unset>,
+                  dynamicProperty = (vmodl.DynamicProperty) [],
+                  key = '1',
+                  value = '-1062719795'
+               },
+               (vmodl.KeyAnyValue) {
+                  dynamicType = <unset>,
+                  dynamicProperty = (vmodl.DynamicProperty) [],
+                  key = '2',
+                  value = '277886574289495672'
+               },
+               (vmodl.KeyAnyValue) {
+                  dynamicType = <unset>,
+                  dynamicProperty = (vmodl.DynamicProperty) [],
+                  key = '3',
+                  value = '192.168.46.212'
+               },
+               (vmodl.KeyAnyValue) {
+                  dynamicType = <unset>,
+                  dynamicProperty = (vmodl.DynamicProperty) [],
+                  key = '4',
+                  value = 'The ESX hosts failed to connect over the VMotion network'
+               }
+            ],
+            message = 'vMotion migration [-1062719795:277886574289495672] failed to create a connection with remote host <192.168.46.212>: The ESX hosts failed to connect over the VMotion network'
+         },
+         (vmodl.LocalizableMessage) {
+            dynamicType = <unset>,
+            dynamicProperty = (vmodl.DynamicProperty) [],
+            key = 'vob.migrate.net.connect.failed.status.addrs',
+            arg = (vmodl.KeyAnyValue) [
+               (vmodl.KeyAnyValue) {
+                  dynamicType = <unset>,
+                  dynamicProperty = (vmodl.DynamicProperty) [],
+                  key = '1',
+                  value = '-1062719795'
+               },
+               (vmodl.KeyAnyValue) {
+                  dynamicType = <unset>,
+                  dynamicProperty = (vmodl.DynamicProperty) [],
+                  key = '2',
+                  value = '277886574289495672'
+               },
+               (vmodl.KeyAnyValue) {
+                  dynamicType = <unset>,
+                  dynamicProperty = (vmodl.DynamicProperty) [],
+                  key = '3',
+                  value = '192.168.46.212'
+               },
+               (vmodl.KeyAnyValue) {
+                  dynamicType = <unset>,
+                  dynamicProperty = (vmodl.DynamicProperty) [],
+                  key = '4',
+                  value = '192.168.46.205'
+               },
+               (vmodl.KeyAnyValue) {
+                  dynamicType = <unset>,
+                  dynamicProperty = (vmodl.DynamicProperty) [],
+                  key = '5',
+                  value = 'Host is down'
+               }
+            ],
+            message = 'Migration [-1062719795:277886574289495672] failed to connect to remote host <192.168.46.212> from host <192.168.46.205>: Host is down.'
+         }
+      ],
+      reason = 'The vMotion failed because the destination host did not receive data from the source host on the vMotion network. Please check your vMotion network settings and physical network configuration and ensure they are correct.'
+   },
+   result = <unset>,
+   progress = <unset>,
+   reason = (vim.TaskReasonUser) {
+      dynamicType = <unset>,
+      dynamicProperty = (vmodl.DynamicProperty) [],
+      userName = 'SKYSCRAPER.LOCAL\\Administrator'
+   },
+   queueTime = 2020-06-05T16:55:00.27815Z,
+   startTime = 2020-06-05T16:55:00.280332Z,
+   completeTime = 2020-06-05T16:57:02.780589Z,
+   eventChainId = 2365423,
+   changeTag = <unset>,
+   parentTaskKey = <unset>,
+   rootTaskKey = <unset>,
+   activationId = <unset>
+}
+2020-06-05 22:26:47,658 - vcst.pyvmomi.vm.generic_vmotion - INFO - Task failed
+2020-06-05 22:26:47,886 - vcst.pyvmomi.vm.generic_vmotion - INFO - (vim.TaskInfo) {
+   dynamicType = <unset>,
+   dynamicProperty = (vmodl.DynamicProperty) [],
+   key = 'task-45251',
+   task = 'vim.Task:task-45251',
+   description = (vmodl.LocalizableMessage) {
+      dynamicType = <unset>,
+      dynamicProperty = (vmodl.DynamicProperty) [],
+      key = 'com.vmware.vim.vpxd.vpx.vmprov.InitiateSource',
+      arg = (vmodl.KeyAnyValue) [],
+      message = 'Migrating Virtual Machine active state'
+   },
+   name = vim.VirtualMachine.Migrate,
+   descriptionId = 'VirtualMachine.migrate',
+   entity = 'vim.VirtualMachine:vm-36154',
+   entityName = 'iclone-1168-1582737625602',
+   locked = (vim.ManagedEntity) [],
+   state = 'error',
+   cancelled = false,
+   cancelable = true,
+   error = (vim.fault.GenericVmConfigFault) {
+      dynamicType = <unset>,
+      dynamicProperty = (vmodl.DynamicProperty) [],
+      msg = 'The vMotion failed because the destination host did not receive data from the source host on the vMotion network. Please check your vMotion network settings and physical network configuration and ensure they are correct.',
+      faultCause = <unset>,
+      faultMessage = (vmodl.LocalizableMessage) [
+         (vmodl.LocalizableMessage) {
+            dynamicType = <unset>,
+            dynamicProperty = (vmodl.DynamicProperty) [],
+            key = 'msg.checkpoint.migration.nodata',
+            arg = (vmodl.KeyAnyValue) [],
+            message = 'The vMotion failed because the destination host did not receive data from the source host on the vMotion network. Please check your vMotion network settings and physical network configuration and ensure they are correct.'
+         },
+         (vmodl.LocalizableMessage) {
+            dynamicType = <unset>,
+            dynamicProperty = (vmodl.DynamicProperty) [],
+            key = 'msg.vmotion.connect.failure',
+            arg = (vmodl.KeyAnyValue) [],
+            message = 'The vMotion migrations failed because the ESX hosts were not able to connect over the vMotion network. Check the vMotion network settings and physical network configuration. '
+         },
+         (vmodl.LocalizableMessage) {
+            dynamicType = <unset>,
+            dynamicProperty = (vmodl.DynamicProperty) [],
+            key = 'vob.vmotion.net.send.connect.failed.status',
+            arg = (vmodl.KeyAnyValue) [
+               (vmodl.KeyAnyValue) {
+                  dynamicType = <unset>,
+                  dynamicProperty = (vmodl.DynamicProperty) [],
+                  key = '1',
+                  value = '-1062719795'
+               },
+               (vmodl.KeyAnyValue) {
+                  dynamicType = <unset>,
+                  dynamicProperty = (vmodl.DynamicProperty) [],
+                  key = '2',
+                  value = '277886574289495672'
+               },
+               (vmodl.KeyAnyValue) {
+                  dynamicType = <unset>,
+                  dynamicProperty = (vmodl.DynamicProperty) [],
+                  key = '3',
+                  value = '192.168.46.212'
+               },
+               (vmodl.KeyAnyValue) {
+                  dynamicType = <unset>,
+                  dynamicProperty = (vmodl.DynamicProperty) [],
+                  key = '4',
+                  value = 'The ESX hosts failed to connect over the VMotion network'
+               }
+            ],
+            message = 'vMotion migration [-1062719795:277886574289495672] failed to create a connection with remote host <192.168.46.212>: The ESX hosts failed to connect over the VMotion network'
+         },
+         (vmodl.LocalizableMessage) {
+            dynamicType = <unset>,
+            dynamicProperty = (vmodl.DynamicProperty) [],
+            key = 'vob.migrate.net.connect.failed.status.addrs',
+            arg = (vmodl.KeyAnyValue) [
+               (vmodl.KeyAnyValue) {
+                  dynamicType = <unset>,
+                  dynamicProperty = (vmodl.DynamicProperty) [],
+                  key = '1',
+                  value = '-1062719795'
+               },
+               (vmodl.KeyAnyValue) {
+                  dynamicType = <unset>,
+                  dynamicProperty = (vmodl.DynamicProperty) [],
+                  key = '2',
+                  value = '277886574289495672'
+               },
+               (vmodl.KeyAnyValue) {
+                  dynamicType = <unset>,
+                  dynamicProperty = (vmodl.DynamicProperty) [],
+                  key = '3',
+                  value = '192.168.46.212'
+               },
+               (vmodl.KeyAnyValue) {
+                  dynamicType = <unset>,
+                  dynamicProperty = (vmodl.DynamicProperty) [],
+                  key = '4',
+                  value = '192.168.46.205'
+               },
+               (vmodl.KeyAnyValue) {
+                  dynamicType = <unset>,
+                  dynamicProperty = (vmodl.DynamicProperty) [],
+                  key = '5',
+                  value = 'Host is down'
+               }
+            ],
+            message = 'Migration [-1062719795:277886574289495672] failed to connect to remote host <192.168.46.212> from host <192.168.46.205>: Host is down.'
+         }
+      ],
+      reason = 'The vMotion failed because the destination host did not receive data from the source host on the vMotion network. Please check your vMotion network settings and physical network configuration and ensure they are correct.'
+   },
+   result = <unset>,
+   progress = <unset>,
+   reason = (vim.TaskReasonUser) {
+      dynamicType = <unset>,
+      dynamicProperty = (vmodl.DynamicProperty) [],
+      userName = 'SKYSCRAPER.LOCAL\\Administrator'
+   },
+   queueTime = 2020-06-05T16:55:00.27815Z,
+   startTime = 2020-06-05T16:55:00.280332Z,
+   completeTime = 2020-06-05T16:57:02.780589Z,
+   eventChainId = 2365423,
+   changeTag = <unset>,
+   parentTaskKey = <unset>,
+   rootTaskKey = <unset>,
+   activationId = <unset>
+}
+2020-06-05 22:26:47,935 - vcst.pyvmomi.vm.generic_vmotion - INFO - Finished  vmotion_vm
+2020-06-05 22:26:47,943 - vcst.pyvmomi.vm.generic_vmotion - INFO - Perform testCleanup

@@ -67,7 +67,7 @@ class Test:
         except Exception as e:
             self.logger.error('Failed in get_vc_session: '+str(e))
             self.logger.exception('')
-            print("Authentication failed")
+            self.logger.info("Authentication failed")
             self.mysession = None
             return None
 
@@ -124,14 +124,14 @@ class Test:
         for device in vm.config.hardware.device:
             if type(device).__name__ == "vim.vm.device.VirtualDisk":
                 datastore = device.backing.datastore
-                print("device.deviceInfo.summary:" + device.deviceInfo.summary)
-                print("datastore.summary.type:" + datastore.summary.type)
+                self.logger.info("device.deviceInfo.summary:" + device.deviceInfo.summary)
+                self.logger.info("datastore.summary.type:" + datastore.summary.type)
                 if hasattr(device.backing, 'fileName'):
                     disk_desc = str(device.backing.fileName)
-                    print("Disc Discription -- {}".format(disk_desc))
+                    self.logger.info("Disc Discription -- {}".format(disk_desc))
                     drive = disk_desc.split("]")[0].replace("[", "")
-                    print("drive:" + drive)
-                    print("device.backing.fileName:" + device.backing.fileName)
+                    self.logger.info("drive:" + drive)
+                    self.logger.info("device.backing.fileName:" + device.backing.fileName)
                     template_disks.append(device)
         return template_disks
 
@@ -147,12 +147,12 @@ class Test:
         """
         ds_disk = []
         for index, wdisk in enumerate(template_disks):
-            print("relocate index:" + str(index))
-            print("disk:" + str(wdisk))
+            self.logger.info("relocate index:" + str(index))
+            self.logger.info("disk:" + str(wdisk))
             disk_desc = str(wdisk.backing.fileName)
             drive = disk_desc.split("]")[0].replace("[", "")
-            print("drive:" + drive)
-            print("wdisk.backing.fileName:" + wdisk.backing.fileName)
+            self.logger.info("drive:" + drive)
+            self.logger.info("wdisk.backing.fileName:" + wdisk.backing.fileName)
             locator = vim.vm.RelocateSpec.DiskLocator()
             locator.diskBackingInfo = wdisk.backing
             locator.diskId = int(wdisk.key)

@@ -106,7 +106,7 @@ class IntelligentProcessor:
             else:
                 mynewcontent = mynewcontent +"\n"+ line
 
-        print(mynewcontent)
+        #print(mynewcontent)
         #os.remove(self.destPath)
         #time.sleep(1)
         with open(self.destPath,'w') as fp:

@@ -57,7 +57,10 @@ class minion:
         failed = 0
         retry = 0
         try:
-            self.testobj.testSetup()
+            testSetupSuccess = self.testobj.testSetup()
+            if not testSetupSuccess:
+                self.logger.error("Test Setup Failed")
+                exit(1)
             self.logger.info("Test Setup Passed")
         except Exception as e:
             self.logger.error("Test Setup Failed: "+str(e))

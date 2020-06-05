@@ -1,6 +1,6 @@
 # Author: ybendre
-# Test: vmotion
-# This test will perform vmotion of vm
+# Test: generic_vmotion
+# This test will perform vmotion/svmotion/xvmotion/xclustervmotion of vm
 
 import json
 import os
@@ -14,28 +14,26 @@ import time
 class Test:
 
     def __init__(self):
+        self.param_valid = True
         self.vc=os.getenv("vcenter")
         if self.vc is None:
-            self.logger.info("No vCenter provided, please set environment variable vcenter")
+            print("No vCenter provided, please set environment variable vcenter")
+            self.param_valid = False
             return
         self.vm = os.getenv("testvm")
         if self.vm is None:
-            self.logger.info("No vm name provided, please set environment variable testvm")
-            return
+            print("No vm name provided, please set environment variable testvm")
+            self.param_valid = False
+            return None
         self.srchost = None
         self.desthost = os.getenv("testdesthost")
         self.srcdatastore = None
         self.destdatastore = os.getenv("testdestdatastore")
-
-        if self.desthost is None:
-            self.logger.info("No desthost name provided, please set environment variable testdesthost")
+        self.vmotion_type = self.decide_vMotion_Type()
+        if self.vmotion_type is None:
+            print("ERROR: Invalid vMotion type. Please provide at least desthost or destdatastore or both")
+            self.param_valid = False
             return None
-
-        if self.destdatastore is None:
-            self.logger.info("No destdatastore name provided, please set environment variable testdesthost")
-            return None
-
-
         self.username = os.getenv("vcuser")
         if self.username is None:
             self.username = "administrator@vsphere.local"
@@ -52,6 +50,17 @@ class Test:
 
         # Function to get the vCenter server session
 
+    def decide_vMotion_Type(self):
+        if (self.desthost is not None) and (self.destdatastore is None):
+            return "vmotion"
+
+        if (self.desthost is None) and (self.destdatastore is not None):
+            return "svmotion"
+
+        if (self.desthost is not None) and (self.destdatastore is not None):
+            return "xvmotion"
+
+        return None
     def get_vc_session(self):
         try:
             si = SmartConnectNoSSL(host=self.vc, user=self.username, pwd=self.password, port=self.port)
@@ -147,6 +156,8 @@ class Test:
         try:
             vm = self.get_obj([vim.VirtualMachine], vm_name)
             self.srchost = vm.runtime.host.name
+            if self.desthost is None:
+                self.desthost = self.srchost
             self.srcdatastore = vm.datastore[0].info.name
             # Create Relocate Spec
             spec = vim.VirtualMachineRelocateSpec()
@@ -190,15 +201,26 @@ class Test:
         self.wait_for_task(task)
 
     def testSetup(self):
-        self.get_vc_session()
-        self.content = self.mysession.RetrieveContent()
-
+        if self.param_valid:
+            self.get_vc_session()
+            self.content = self.mysession.RetrieveContent()
+            return True
+        else:
+            print("Invalid test paramaeters")
+            return False
 
     def testTask(self):
         test_status = True
-        test_status = self.relocate_vm(self.vm, self.desthost, self.destdatastore)
-        if test_status:
-            test_status = self.relocate_vm(self.vm, self.srchost, self.srcdatastore)
+        if self.vmotion_type == 'vmotion':
+            test_status = self.vmotion_vm(self.vm, self.desthost)
+            if test_status:
+                test_status = self.vmotion_vm(self.vm, self.srchost)
+            return test_status
+
+        else:
+            test_status = self.relocate_vm(self.vm, self.desthost, self.destdatastore)
+            if test_status:
+                test_status = self.relocate_vm(self.vm, self.srchost, self.srcdatastore)
         return test_status
 
     def testCleanup(self):
