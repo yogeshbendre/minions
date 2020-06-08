@@ -8,7 +8,7 @@ class IntelligentProcessor:
     destPath = None
 
 
-    def __init__(self,srcPath,destPath):
+    def __init__(self,srcPath, destPath, instance_num=1):
 
         self.srcPath = srcPath
         self.destPath = destPath

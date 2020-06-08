@@ -22,15 +22,20 @@ class minion:
     testfilepath = None
     newtestfilepath = None
     testobj = None
-    mysuffix = '_run'
+    mysuffix = '_TEST'
 
-    def __init__(self,testfilepath,preprocess=False):
+    def __init__(self,testfilepath, preprocess=False, instance_name="1"):
         self.testfilepath = testfilepath
+        if os.getenv("instance_name") is not None:
+            instance_name=os.getenv("instance_name")
+
+        self.mysuffix = self.mysuffix + "_INSTANCE-" + instance_name
+        self.instance_name = instance_name
         self.newtestfilepath = testfilepath + self.mysuffix
         logging.config.fileConfig('logging.conf', False)
         self.logger = logging.getLogger('minion')
         #self.logger = setup_logger('minion', 'minion.log')
-        self.clientlogger = setup_logger(testfilepath, 'test.log')
+        self.clientlogger = setup_logger(self.newtestfilepath, 'test.log')
         if preprocess:
             self.preprocessTestFile()
         else:
@@ -39,7 +44,7 @@ class minion:
     def preprocessTestFile(self):
         srcFile = self.testfilepath.replace('.','/')+'.py'
         destFile = self.newtestfilepath.replace('.', '/') + '.py'
-        myprocessor = IP(srcFile,destFile)
+        myprocessor = IP(srcFile, destFile, self.instance_name)
         myprocessor.processContents()
         self.logger.info('Processed: '+self.testfilepath)
 
@@ -57,11 +62,19 @@ class minion:
         failed = 0
         retry = 0
         try:
-            testSetupSuccess = self.testobj.testSetup()
-            if not testSetupSuccess:
-                self.logger.error("Test Setup Failed")
-                exit(1)
-            self.logger.info("Test Setup Passed")
+            testSetupSuccess = False
+            if os.getenv("testsetup") == "False":
+                self.logger.info("Received command to not run setup. Skipping setup.")
+                testSetupSuccess = True
+            else:
+                self.logger.info("Performing test setup now.")
+                testSetupSuccess = self.testobj.testSetup()
+                if (testSetupSuccess is None) or (not testSetupSuccess):
+                    self.logger.error("Test Setup Failed")
+                    if testSetupSuccess is None:
+                        self.logger.info("Test setup method did not return anything. Make sure to return True (success) or False (Failure) from test setup method.")
+                    exit(1)
+                self.logger.info("Test Setup Passed")
         except Exception as e:
             self.logger.error("Test Setup Failed: "+str(e))
             return
