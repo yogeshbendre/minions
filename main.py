@@ -29,13 +29,15 @@ class minion:
         if os.getenv("instance_name") is not None:
             instance_name=os.getenv("instance_name")
 
+        self.testnamestring = self.testfilepath + " " + instance_name
         self.mysuffix = self.mysuffix + "_INSTANCE-" + instance_name
         self.instance_name = instance_name
         self.newtestfilepath = testfilepath + self.mysuffix
+
         logging.config.fileConfig('logging.conf', False)
-        self.logger = logging.getLogger('minion')
+        self.logger = logging.getLogger(self.testnamestring+ ' minion')
         #self.logger = setup_logger('minion', 'minion.log')
-        self.clientlogger = setup_logger(self.newtestfilepath, 'test.log')
+        self.clientlogger = setup_logger(self.testnamestring+' '+self.newtestfilepath, 'test.log')
         if preprocess:
             self.preprocessTestFile()
         else:
@@ -61,6 +63,7 @@ class minion:
         passed = 0
         failed = 0
         retry = 0
+        total = 0
         try:
             testSetupSuccess = False
             if os.getenv("testsetup") == "False":
@@ -79,24 +82,32 @@ class minion:
             self.logger.error("Test Setup Failed: "+str(e))
             return
 
-        for it in range(0, iterations):
+        for it in range(1, (iterations+1)):
+            total = total + 1
             try:
                 testSuccess = self.testobj.testTask()
                 assert (testSuccess), "Test Failed"
                 passed=passed + 1
-                self.logger.info("Test Passed Iteration "+str(it+1)+" Out of "+str(iterations)+" Pass Rate: "+str(round(100*passed/iterations))+"%")
+                self.logger.info("Test Passed Iteration #"+str(it)+" Out of "+str(it)+" Current Pass Rate: "+str(round(100*passed/total))+"%")
             except Exception as e:
-                self.logger.info("Test Failed Iteration "+str(it+1)+" Out of "+str(iterations)+" Pass Rate: "+str(round(100*passed/iterations))+"%")
-                failed = failed+1
+                failed = failed + 1
+                self.logger.info("Test Failed Iteration #"+str(it)+" Out of "+str(it)+" Current Pass Rate: "+str(round(100*passed/total))+"%")
                 retry = retry + 1
                 if retry > retryCnt:
                     break
-                continue
+                #continue
+
+            pp = round(100 * passed / total)
+            self.logger.info("Current Test Result: Run: " + str(total) + " out of : " + str(iterations) + " Pass: " + str(passed) + " Failed: " + str(failed) + " Pass Percentage: " + str(pp) + "%")
+            if os.getenv("teststop")=="True":
+                self.logger.info("Received Stop Signal, stopping the test now.")
+                break
+
         try:
             self.testobj.testCleanup()
         except Exception as e:
             self.logger.warning("Test Cleanup Failed: "+str(e))
 
-        pp = round(100*passed/iterations)
-        self.logger.info("Test Result: Total: "+str(iterations)+" Pass: "+str(passed)+" Failed: "+str(failed)+" Pass Percentage: "+str(pp)+"%")
+        pp = round(100*passed/total)
+        self.logger.info("Final Test Result: Run: " + str(total) + " out of : " + str(iterations) + " Pass: " + str(passed) + " Failed: " + str(failed) + " Pass Percentage: " + str(pp) + "%")
 
