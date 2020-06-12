@@ -29,7 +29,11 @@ class minion:
         if os.getenv("instance_name") is not None:
             instance_name=os.getenv("instance_name")
 
-        self.testnamestring = self.testfilepath + " " + instance_name
+        self.target = str(os.getenv("testtarget"))
+        if self.target is None:
+            self.testtarget = "Generic"
+
+        self.testnamestring = self.testtarget + " " +self.testfilepath + " " + instance_name
         self.mysuffix = self.mysuffix + "_INSTANCE-" + instance_name
         self.instance_name = instance_name
         self.newtestfilepath = testfilepath + self.mysuffix
