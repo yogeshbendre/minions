@@ -33,7 +33,7 @@ class minion:
         if self.target is None:
             self.testtarget = "Generic"
 
-        self.testnamestring = self.testtarget + " " +self.testfilepath + " " + instance_name
+        self.testnamestring = self.target + " " +self.testfilepath + " " + instance_name
         self.mysuffix = self.mysuffix + "_INSTANCE-" + instance_name
         self.instance_name = instance_name
         self.newtestfilepath = testfilepath + self.mysuffix
