@@ -1,7 +1,7 @@
 from IntelligentProcessor import IntelligentProcessor as IP
 import os
 import logging.config
-
+import time
 
 formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 
@@ -33,6 +33,10 @@ class minion:
         if self.target is None:
             self.testtarget = "Generic"
 
+        self.gap = os.getenv("testgapsec")
+        if self.gap is None:
+            self.gap = '60'
+        self.gap = int(self.gap)
         self.testnamestring = self.target + " " +self.testfilepath + " " + instance_name
         self.mysuffix = self.mysuffix + "_INSTANCE-" + instance_name
         self.instance_name = instance_name
@@ -88,6 +92,7 @@ class minion:
 
         for it in range(1, (iterations+1)):
             total = total + 1
+            self.logger.info("Starting iteration #", total)
             try:
                 testSuccess = self.testobj.testTask()
                 assert (testSuccess), "Test Failed"
@@ -103,10 +108,13 @@ class minion:
 
             pp = round(100 * passed / total)
             self.logger.info("Current Test Result: Run: " + str(total) + " out of : " + str(iterations) + " Pass: " + str(passed) + " Failed: " + str(failed) + " Pass Percentage: " + str(pp) + "%")
+            self.logger.info("Completed iteration #", total)
+
             if os.getenv("teststop")=="True":
                 self.logger.info("Received Stop Signal, stopping the test now.")
                 break
-
+            self.logger.info("Sleeping for testgapsec sec. : ", self.gap)
+            time.sleep(self.gap)
         try:
             self.testobj.testCleanup()
         except Exception as e:
