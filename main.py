@@ -31,7 +31,7 @@ class minion:
 
         self.target = str(os.getenv("testtarget"))
         if self.target is None:
-            self.testtarget = "Generic"
+            self.target = "Generic"
 
         self.gap = os.getenv("testgapsec")
         if self.gap is None:
