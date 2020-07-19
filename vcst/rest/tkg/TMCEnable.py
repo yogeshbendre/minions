@@ -17,13 +17,10 @@ def workflow(vc, username, password, tmc_url, api_token, org_id, lcp_prefix, mon
     success = tmc_workflow.monitor_registration(monitor_time_in_min)
     return success
 
-
-
-
 class TMCWorkFlow:
 
-    def __init__(self, vc, username, password, tmc_url, api_token, org_id, lcp_prefix, yaml_action, mylogger):
-        self.logger = mylogger
+    def __init__(self, vc, username, password, tmc_url, api_token, org_id, lcp_prefix, yaml_action):
+        #self.logger = mylogger
         self.vc = vc
         self.username = username
         self.password = password
