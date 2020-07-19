@@ -42,7 +42,7 @@ class TMCWorkFlow:
             try:
                 print("Creating LCP for "+self.wcp_info[w]["IP"])
                 print("")
-                lcp_name = lcp_prefix + "-vc-" +self.vc.replace(".","-") + "-w-" + self.wcp_info[w]["IP"].replace(".","-") + "lcp"
+                lcp_name = self.lcp_prefix + "-vc-" +self.vc.replace(".","-") + "-w-" + self.wcp_info[w]["IP"].replace(".","-") + "lcp"
                 myinfo = self.tmc_handler.create_local_control_plane(lcp_name)
                 self.wcp_info[w]["lcp"] = myinfo
                 self.wcp_info[w]["lcp_name"] = lcp_name

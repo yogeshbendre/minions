@@ -43,7 +43,7 @@ class TMCWorkFlow:
         for w in self.wcp_info:
             print("Cluster: "+w)
             try:
-                lcp_name = lcp_prefix + "-vc-" + self.vc.replace(".", "-") + "-w-" + self.wcp_info[w]["IP"].replace(".", "-") + "lcp"
+                lcp_name = self.lcp_prefix + "-vc-" + self.vc.replace(".", "-") + "-w-" + self.wcp_info[w]["IP"].replace(".", "-") + "lcp"
                 self.wcp_info[w]["lcp_name"] = lcp_name
                 print("LCP: "+lcp_name)
 
@@ -59,7 +59,7 @@ class TMCWorkFlow:
             try:
                 print("Deleting LCP for "+self.wcp_info[w]["IP"])
                 print("")
-                lcp_name = lcp_prefix + "-vc-" + self.vc.replace(".", "-") + "-w-" + self.wcp_info[w]["IP"].replace(".", "-") + "lcp"
+                lcp_name = self.lcp_prefix + "-vc-" + self.vc.replace(".", "-") + "-w-" + self.wcp_info[w]["IP"].replace(".", "-") + "lcp"
                 myinfo = self.tmc_handler.delete_local_control_plane(lcp_name, force)
                 self.wcp_info[w]["lcp"] = myinfo
                 self.wcp_info[w]["lcp_name"] = lcp_name
