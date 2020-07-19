@@ -14,7 +14,8 @@ def workflow(vc, username, password, tmc_url, api_token, org_id, lcp_prefix, mon
     tmc_workflow = TMCWorkFlow(vc, username, password, tmc_url, api_token, org_id, lcp_prefix, yaml_action)
     tmc_workflow.create_lcp()
     tmc_workflow.register_cluster()
-    tmc_workflow.monitor_registration(monitor_time_in_min)
+    success = tmc_workflow.monitor_registration(monitor_time_in_min)
+    return success
 
 
 

@@ -9,12 +9,15 @@ from vcst.rest.tkg.TMCHandler import TMC
 from vcst.rest.tkg.WCPFetcher import WCPFetcher
 import time
 
+
 def workflow(vc, username, password, tmc_url, api_token, org_id, lcp_prefix, monitor_time_in_min, yaml_action, force_delete):
     tmc_workflow = TMCWorkFlow(vc, username, password, tmc_url, api_token, org_id, lcp_prefix, yaml_action)
     tmc_workflow.fillInfo()
     tmc_workflow.deregister_cluster()
-    tmc_workflow.monitor_deregistration(monitor_time_in_min)
-    tmc_workflow.delete_lcp(force_delete)
+    success = tmc_workflow.monitor_deregistration(monitor_time_in_min)
+    if success:
+        tmc_workflow.delete_lcp(force_delete)
+    return success
 
 
 
