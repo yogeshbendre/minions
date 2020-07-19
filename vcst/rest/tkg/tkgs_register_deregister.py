@@ -6,8 +6,8 @@ import json
 import os
 import requests
 from requests.packages.urllib3.exceptions import InsecureRequestWarning
-from TMCEnable import workflow as enable_workflow
-from TMCDisable import workflow as disable_workflow
+from vcst.rest.tkg.TMCEnable import workflow as enable_workflow
+from vcst.rest.tkg.TMCDisable import workflow as disable_workflow
 
 requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
