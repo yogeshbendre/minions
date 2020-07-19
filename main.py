@@ -29,7 +29,7 @@ class minion:
         if os.getenv("instance_name") is not None:
             instance_name=os.getenv("instance_name")
 
-        self.target = str(os.getenv("testtarget"))
+        self.target = os.getenv("testtarget")
         if self.target is None:
             self.target = "Generic"
 

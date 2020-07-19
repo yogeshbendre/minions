@@ -58,6 +58,7 @@ class Test:
 
     def testSetup(self):
         self.get_vc_session()
+        return True
 
     def testTask(self):
         myurl = "https://"+self.vc+":"+self.port+" /rest/vcenter/certificate-management/vcenter/vmca-root"
@@ -72,6 +73,7 @@ class Test:
         print(myresp.text)
         self.logger.info(myresp.status_code)
         self.logger.info(str(myresp.text))
+        return True
 
     def testCleanup(self):
         pass
