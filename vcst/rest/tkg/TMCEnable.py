@@ -5,8 +5,8 @@
 import json
 import json
 import argparse
-from TMCHandler import TMC
-from WCPFetcher import WCPFetcher
+from vcst.rest.tkg.TMCHandler import TMC
+from vcst.rest.tkg.WCPFetcher import WCPFetcher
 import time
 
 

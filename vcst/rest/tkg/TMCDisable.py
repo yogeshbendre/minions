@@ -5,8 +5,8 @@
 import json
 import json
 import argparse
-from TMCHandler import TMC
-from WCPFetcher import WCPFetcher
+from vcst.rest.tkg.TMCHandler import TMC
+from vcst.rest.tkg.WCPFetcher import WCPFetcher
 import time
 
 def workflow(vc, username, password, tmc_url, api_token, org_id, lcp_prefix, monitor_time_in_min, yaml_action, force_delete):
