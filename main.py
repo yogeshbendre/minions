@@ -119,7 +119,7 @@ class minion:
             if os.getenv("teststop")=="True":
                 self.logger.info("Received Stop Signal, stopping the test now.")
                 break
-            self.logger.info("Sleeping for testgapsec sec. : ", self.gap)
+            self.logger.info("Sleeping for testgapsec sec. : " + str(self.gap))
             time.sleep(self.gap)
         try:
             self.testobj.testCleanup()
