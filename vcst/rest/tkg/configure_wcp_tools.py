@@ -4,15 +4,9 @@
 
 import json
 import os
-import requests
 import time
 from vcst.rest.tkg import WCPFetcher as wf
 
-
-requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
-
-mysession = requests.Session()
-mysession.verify = False
 #Params: vc, username, password, tmc_url, api_token, org_id, lcp_prefix, monitor_time_in_min, yaml_action, force_delete
 class Test:
 
