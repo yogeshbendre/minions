@@ -48,11 +48,12 @@ class Test:
 
     def runCommandOnWCPClusters(self, cmd, sleepTime=0):
         for w in self.wcpfetcher.wcp_info:
+            cmd = cmd.replace("MYWCPIP", self.wcpfetcher.wcp_info[w]["IP"])
             self.wcpfetcher.run_command_on_each_master(w, cmd, self.numMasters)
             time.sleep(sleepTime)
 
     def ifconfig(self):
-        cmd1 = 'ifconfig'
+        cmd1 = 'echo MYWCPIP ; ifconfig'
         self.runCommandOnWCPClusters(cmd1, 0)
 
 
@@ -60,10 +61,12 @@ class Test:
     def installLogInsightAgent(self):
         cmd1 = 'curl -k -X GET "https://10.199.56.1/LI/LIAgent.rpm - o /root/LIAgent.rpm"'
         cmd2 = 'SERVERHOST='+self.lihost+' rpm -i /root/LIAgent.rpm'
-        cmd3 = '/etc/init.d/liagentd start'
+        cmd3 = "echo '[common|filelog]' >> /var/lib/loginsight-agent/liagent.ini; echo 'tags = {\"vcenter\":\""+self.vc+""\",\"wcp_sv_ip\":\"MYWCPIP"\",\"target\":\"wcp\"}' >> /var/lib/loginsight-agent/liagent.ini;"
+        cmd4 = '/etc/init.d/liagentd start'
         self.runCommandOnWCPClusters(cmd1, 2)
         self.runCommandOnWCPClusters(cmd2, 2)
         self.runCommandOnWCPClusters(cmd3, 2)
+        self.runCommandOnWCPClusters(cmd4, 2)
 
     def testSetup(self):
         if self.param_valid:
