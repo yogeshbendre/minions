@@ -77,7 +77,8 @@ class Test:
 
     def testTask(self):
         try:
-            self.installLogInsightAgent()
+            #self.installLogInsightAgent()
+            self.ifconfig()
             return True
         except Exception as e:
             return False
