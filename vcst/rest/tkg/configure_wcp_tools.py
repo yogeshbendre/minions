@@ -61,7 +61,7 @@ class Test:
     def installLogInsightAgent(self):
         cmd1 = 'curl -k -X GET "https://10.199.56.1/LI/LIAgent.rpm - o /root/LIAgent.rpm"'
         cmd2 = 'SERVERHOST='+self.lihost+' rpm -i /root/LIAgent.rpm'
-        cmd3 = "echo '[common|filelog]' >> /var/lib/loginsight-agent/liagent.ini; echo 'tags = {\"vcenter\":\""+self.vc+""\",\"wcp_sv_ip\":\"MYWCPIP"\",\"target\":\"wcp\"}' >> /var/lib/loginsight-agent/liagent.ini;"
+        cmd3 = "echo '[common|filelog]' >> /var/lib/loginsight-agent/liagent.ini; echo 'tags = {\"vcenter\":\""+self.vc+"\",\"wcp_sv_ip\":\"MYWCPIP\",\"target\":\"wcp\"}' >> /var/lib/loginsight-agent/liagent.ini;"
         cmd4 = '/etc/init.d/liagentd start'
         self.runCommandOnWCPClusters(cmd1, 2)
         self.runCommandOnWCPClusters(cmd2, 2)
