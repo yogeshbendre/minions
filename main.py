@@ -37,6 +37,12 @@ class minion:
         if self.gap is None:
             self.gap = '60'
         self.gap = int(self.gap)
+
+        self.retryCnt = os.getenv("retry_count")
+        if self.retryCnt is None:
+            self.retryCnt = '0'
+        self.retryCnt = int(self.retryCnt)
+
         self.testnamestring = self.target + " " +self.testfilepath + " " + instance_name
         self.mysuffix = self.mysuffix + "_INSTANCE-" + instance_name
         self.instance_name = instance_name
@@ -102,7 +108,7 @@ class minion:
                 failed = failed + 1
                 self.logger.info("Test Failed Iteration #"+str(it)+" Out of "+str(it)+" Current Pass Rate: "+str(round(100*passed/total))+"%")
                 retry = retry + 1
-                if retry > retryCnt:
+                if retry > self.retryCnt:
                     break
                 #continue
 

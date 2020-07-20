@@ -71,11 +71,34 @@ class Test:
         if "false" in force_delete.lower():
             self.force = False
 
+        self.workflow = os.getenv("workflow")
+        if self.workflow is None:
+            self.workflow = "register_deregister"
+
+        self.wait_before_deregister_min = os.getenv("wait_before_deregister_min")
+        if self.wait_before_deregister_min is None:
+            self.wait_before_deregister_min = "1"
+
+        self.wait_before_deregister_min = int(self.wait_before_deregister_min)
+
 
         self.mysession=mysession
         self.sessionval = None
 
         # Function to get the vCenter server session
+
+
+    def register_workflow(self):
+        success = enable_workflow(self.vc, self.username, self.password, self.tmc_url, self.api_token, self.org_id, self.lcp_prefix, self.monitor_time_in_min, self.yaml_action)
+        return success
+
+    def deregister_workflow(self):
+        success = disable_workflow(self.vc, self.username, self.password, self.tmc_url, self.api_token, self.org_id, self.lcp_prefix, self.monitor_time_in_min, self.yaml_action, self.force)
+        return success
+
+    def wait_before_deregister(self):
+        print("Sleeping for "+str(self.wait_before_deregister_min)+" minutes...")
+        time.sleep(60*self.wait_before_deregister_min)
 
     def testSetup(self):
         if self.param_valid:
@@ -86,18 +109,21 @@ class Test:
 
 
     def testTask(self):
-        success = False
+        success = True
         try:
-            success = enable_workflow(self.vc, self.username, self.password, self.tmc_url, self.api_token, self.org_id, self.lcp_prefix, self.monitor_time_in_min, self.yaml_action)
-            if success:
-                success = disable_workflow(self.vc, self.username, self.password, self.tmc_url, self.api_token, self.org_id, self.lcp_prefix, self.monitor_time_in_min, self.yaml_action, self.force)
+            if "register" in self.workflow:
+                success = self.register_workflow()
+
+            if "register_deregister" in self.workflow:
+                self.wait_before_deregister()
+
+            if "deregister" in self.workflow:
+                if success:
+                    success = self.deregister_workflow()
+
             return success
         except Exception as e:
             return False
-
-
-        return True
-
 
     def testCleanup(self):
         return True
