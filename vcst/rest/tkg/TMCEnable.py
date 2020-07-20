@@ -110,6 +110,10 @@ class TMCWorkFlow:
                     myhealth = self.is_lcp_healthy(self.wcp_info[w]["lcp_name"])
                     areAllHealthy = areAllHealthy and myhealth
                     healthStates[self.wcp_info[w]["lcp_name"]] = myhealth
+                    try:
+                        self.wcp_fetcher.run_command_on_wcp(w, "kubectl get pods -A | grep tmc")
+                    except Exception as e2:
+                        print(str(e2))
                 except Exception as e:
                     healthStates[self.wcp_info[w]["lcp_name"]] = False
             if(areAllHealthy):

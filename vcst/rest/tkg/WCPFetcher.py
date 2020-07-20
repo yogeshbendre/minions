@@ -36,6 +36,31 @@ class WCPFetcher:
             print("Something went wrong: "+str(e))
             return None
 
+    def run_command_on_each_master(self, wcp_id, cmd, numMasters=3):
+        print("No. of masters: "+str(numMasters))
+        base_ip = self.wcp_info[wcp_id]["IP"]
+        lastField = int(base_ip.split(".")[-1])
+        for i in range(lastField+1, lastField+4):
+            myip = base_ip.replace(str(lastField), str(i))
+            print("Master IP: "+str(myip))
+            print("Running Command: ")
+            print(cmd)
+            ssh_client = paramiko.SSHClient()
+            ssh_client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
+            ssh_client.connect(hostname=myip, username="root", password=self.wcp_info[wcp_id]["PWD"])
+            stdin, stdout, stderr = ssh_client.exec_command(cmd)
+            time.sleep(1)
+            try:
+                myout = stdout.readlines()
+                for l in myout:
+                    print(l)
+                #return myout
+            except Exception as e:
+                print("Something went wrong: "+str(e))
+                #return None
+
+        print("Completed")
+
 
     def get_wcp_info(self):
         ssh_client =paramiko.SSHClient()
