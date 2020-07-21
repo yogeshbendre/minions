@@ -82,6 +82,12 @@ class Test:
 
         self.wait_before_deregister_min = int(self.wait_before_deregister_min)
 
+        self.skipClusterIPList = os.getenv("skipClusterIPList")
+        if self.skipClusterIPList is None:
+            self.skipClusterIPList = []
+        else:
+            self.skipClusterIPList = self.skipClusterIPList.split(",")
+
 
         self.mysession=mysession
         self.sessionval = None
@@ -90,11 +96,11 @@ class Test:
 
 
     def register_workflow(self):
-        success = enable_workflow(self.vc, self.username, self.password, self.tmc_url, self.api_token, self.org_id, self.lcp_prefix, self.monitor_time_in_min, self.yaml_action)
+        success = enable_workflow(self.vc, self.username, self.password, self.tmc_url, self.api_token, self.org_id, self.lcp_prefix, self.monitor_time_in_min, self.yaml_action, self.skipClusterIPList)
         return success
 
     def deregister_workflow(self):
-        success = disable_workflow(self.vc, self.username, self.password, self.tmc_url, self.api_token, self.org_id, self.lcp_prefix, self.monitor_time_in_min, self.yaml_action, self.force)
+        success = disable_workflow(self.vc, self.username, self.password, self.tmc_url, self.api_token, self.org_id, self.lcp_prefix, self.monitor_time_in_min, self.yaml_action, self.force, self.skipClusterIPList)
         return success
 
     def wait_before_deregister(self):

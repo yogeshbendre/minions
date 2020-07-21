@@ -10,8 +10,8 @@ from vcst.rest.tkg.WCPFetcher import WCPFetcher
 import time
 
 
-def workflow(vc, username, password, tmc_url, api_token, org_id, lcp_prefix, monitor_time_in_min, yaml_action, force_delete):
-    tmc_workflow = TMCWorkFlow(vc, username, password, tmc_url, api_token, org_id, lcp_prefix, yaml_action)
+def workflow(vc, username, password, tmc_url, api_token, org_id, lcp_prefix, monitor_time_in_min, yaml_action, force_delete, skiplist=[]):
+    tmc_workflow = TMCWorkFlow(vc, username, password, tmc_url, api_token, org_id, lcp_prefix, yaml_action, skiplist)
     tmc_workflow.fillInfo()
     tmc_workflow.deregister_cluster()
     success = tmc_workflow.monitor_deregistration(monitor_time_in_min)
@@ -23,7 +23,7 @@ def workflow(vc, username, password, tmc_url, api_token, org_id, lcp_prefix, mon
 
 class TMCWorkFlow:
 
-    def __init__(self, vc, username, password, tmc_url, api_token, org_id, lcp_prefix, yaml_action):
+    def __init__(self, vc, username, password, tmc_url, api_token, org_id, lcp_prefix, yaml_action, skiplist=[]):
         self.vc = vc
         self.username = username
         self.password = password
@@ -35,6 +35,12 @@ class TMCWorkFlow:
         self.tmc_handler = TMC(self.tmc_url, self.api_token, self.org_id)
         self.wcp_fetcher = WCPFetcher(self.vc, self.username, self.password)
         self.wcp_info = self.wcp_fetcher.wcp_info
+        self.skipIPList = skipIPList
+        print("Skip List: " + str(self.skipIPList))
+        mywcp_info = self.wcp_info.copy()
+        for w in mywcp_info:
+            if mywcp_info[w]["IP"] in self.skipIPList:
+                self.wcp_info.pop(w, None)
         print("WCP Clusters: ")
         print(self.wcp_info)
         print("Initialized successfully")
@@ -176,6 +182,7 @@ if __name__ == "__main__":
     parser.add_argument("-f", "--force", type=str, help="Specify true/false whether to force delete. Default: true")
     parser.add_argument("-y", "--yamlaction", type=str, help="Specify either apply or generate. Default: apply")
     parser.add_argument("-m", "--monitortime", type=str, help="Specify time in minutes to monitor deregistration. Default: 5")
+    parser.add_argument("-s", "--skiplist", type=str, help="Specify comma separated list of Cluster IPs to skip. Default is empty")
 
     args = parser.parse_args()
 
@@ -252,5 +259,11 @@ if __name__ == "__main__":
         print("No monitor time specified. Assuming 5 min.")
         monitor_time_in_min = 5
 
-    workflow(vc, username, password, tmc_url, api_token, org_id, lcp_prefix, monitor_time_in_min, yaml_action,
-             force_delete)
+    if args.skiplist:
+        skiplist = args.skiplist.split(",")
+    else:
+        print("No skiplist specified. Assuming empty.")
+        skiplist = []
+
+
+    workflow(vc, username, password, tmc_url, api_token, org_id, lcp_prefix, monitor_time_in_min, yaml_action, force_delete, skiplist)
