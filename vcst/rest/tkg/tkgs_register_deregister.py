@@ -74,7 +74,7 @@ class Test:
 
         self.workflow = os.getenv("workflow")
         if self.workflow is None:
-            self.workflow = "register_deregister"
+            self.workflow = "enable_disable"
 
         self.wait_before_deregister_min = os.getenv("wait_before_deregister_min")
         if self.wait_before_deregister_min is None:
@@ -118,13 +118,13 @@ class Test:
     def testTask(self):
         success = True
         try:
-            if "register" in self.workflow:
+            if "enable" in self.workflow:
                 success = self.register_workflow()
 
-            if "register_deregister" in self.workflow:
+            if "enable_disable" in self.workflow:
                 self.wait_before_deregister()
 
-            if "deregister" in self.workflow:
+            if "disable" in self.workflow:
                 if success:
                     success = self.deregister_workflow()
 
