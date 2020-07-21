@@ -42,8 +42,8 @@ class Test:
 
     def runCommandOnWCPClusters(self, cmd, sleepTime=0):
         for w in self.wcpfetcher.wcp_info:
-            cmd = cmd.replace("MYWCPIP", self.wcpfetcher.wcp_info[w]["IP"])
-            self.wcpfetcher.run_command_on_each_master(w, cmd, self.numMasters)
+            cmd1 = cmd.replace("MYWCPIP", self.wcpfetcher.wcp_info[w]["IP"])
+            self.wcpfetcher.run_command_on_each_master(w, cmd1, self.numMasters)
             time.sleep(sleepTime)
 
     def ifconfig(self):
