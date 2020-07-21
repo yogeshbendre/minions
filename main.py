@@ -104,17 +104,18 @@ class minion:
                 assert (testSuccess), "Test Failed"
                 passed=passed + 1
                 self.logger.info("Test Passed Iteration #"+str(it)+" Out of "+str(it)+" Current Pass Rate: "+str(round(100*passed/total))+"%")
+                retry = 0
             except Exception as e:
                 failed = failed + 1
                 self.logger.info("Test Failed Iteration #"+str(it)+" Out of "+str(it)+" Current Pass Rate: "+str(round(100*passed/total))+"%")
                 retry = retry + 1
-                if retry > self.retryCnt:
-                    break
                 #continue
 
             pp = round(100 * passed / total)
             self.logger.info("Current Test Result: Run: " + str(total) + " out of : " + str(iterations) + " Pass: " + str(passed) + " Failed: " + str(failed) + " Pass Percentage: " + str(pp) + "%")
             self.logger.info("Completed iteration #", total)
+            if retry > self.retryCnt:
+                break
 
             if os.getenv("teststop")=="True":
                 self.logger.info("Received Stop Signal, stopping the test now.")
