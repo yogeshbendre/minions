@@ -52,7 +52,7 @@ class Test:
         return isHealthy
 
 
-def testSetup(self):
+    def testSetup(self):
         if self.param_valid:
             return True
         else:
