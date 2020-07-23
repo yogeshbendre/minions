@@ -73,7 +73,7 @@ class minion:
             exit(1)
 
     def testMe(self, iterations, retryCnt):
-        self.logger.info("Trigger test for iterations: "+str(iterations)+" with retryCnt: "+str(retryCnt))
+        self.logger.info("Trigger test for iterations: "+str(iterations)+" with retryCnt: "+str(self.retryCnt))
         passed = 0
         failed = 0
         retry = 0
