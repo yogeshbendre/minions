@@ -3107,3 +3107,70 @@ AttributeError: 'Test' object has no attribute 'username'
 2020-06-11 13:52:06,493 - vcst.pyvmomi.vcenter.login_logout 1 vcst.pyvmomi.vcenter.login_logout_TEST_INSTANCE-1 - INFO - Perform login
 2020-06-11 13:52:08,679 - vcst.pyvmomi.vcenter.login_logout 1 vcst.pyvmomi.vcenter.login_logout_TEST_INSTANCE-1 - INFO - Perform logout
 2020-06-11 13:52:09,169 - vcst.pyvmomi.vcenter.login_logout 1 vcst.pyvmomi.vcenter.login_logout_TEST_INSTANCE-1 - INFO - Perform testCleanup
+2020-08-05 12:18:46,718 - Generic vcst.rest.vcenter.login_logout 1 vcst.rest.vcenter.login_logout_TEST_INSTANCE-1 - INFO - Perform __init__
+2020-08-05 12:18:46,719 - Generic vcst.rest.vcenter.login_logout 1 vcst.rest.vcenter.login_logout_TEST_INSTANCE-1 - INFO - Finished  __init__
+2020-08-05 12:18:46,738 - Generic vcst.rest.vcenter.login_logout 1 vcst.rest.vcenter.login_logout_TEST_INSTANCE-1 - INFO - Perform testSetup
+2020-08-05 12:18:46,739 - Generic vcst.rest.vcenter.login_logout 1 vcst.rest.vcenter.login_logout_TEST_INSTANCE-1 - INFO - Finished  testSetup
+2020-08-05 13:29:08,124 - Generic vcst.rest.vcenter.login_logout 1 vcst.rest.vcenter.login_logout_TEST_INSTANCE-1 - INFO - Perform __init__
+2020-08-05 13:29:08,125 - Generic vcst.rest.vcenter.login_logout 1 vcst.rest.vcenter.login_logout_TEST_INSTANCE-1 - INFO - Finished  __init__
+2020-08-05 13:29:08,189 - Generic vcst.rest.vcenter.login_logout 1 vcst.rest.vcenter.login_logout_TEST_INSTANCE-1 - INFO - Perform testSetup
+2020-08-05 13:29:08,355 - Generic vcst.rest.vcenter.login_logout 1 vcst.rest.vcenter.login_logout_TEST_INSTANCE-1 - INFO - Perform testTask
+2020-08-05 13:29:08,380 - Generic vcst.rest.vcenter.login_logout 1 vcst.rest.vcenter.login_logout_TEST_INSTANCE-1 - INFO - Perform get_vc_session
+2020-08-05 13:29:08,380 - Generic vcst.rest.vcenter.login_logout 1 vcst.rest.vcenter.login_logout_TEST_INSTANCE-1 - INFO - 10.199.56.7
+2020-08-05 13:29:08,387 - Generic vcst.rest.vcenter.login_logout 1 vcst.rest.vcenter.login_logout_TEST_INSTANCE-1 - INFO - administrator@vsphere.local
+2020-08-05 13:29:08,414 - Generic vcst.rest.vcenter.login_logout 1 vcst.rest.vcenter.login_logout_TEST_INSTANCE-1 - INFO - <requests.sessions.Session object at 0x0000025375FB8978>
+2020-08-05 13:29:08,415 - Generic vcst.rest.vcenter.login_logout 1 vcst.rest.vcenter.login_logout_TEST_INSTANCE-1 - INFO - https://10.199.56.7:443/rest/com/vmware/cis/session
+2020-08-05 13:29:09,564 - Generic vcst.rest.vcenter.login_logout 1 vcst.rest.vcenter.login_logout_TEST_INSTANCE-1 - INFO - {"value":"e5e0024df936f019451edd6f763ac2e5"}
+2020-08-05 13:29:09,598 - Generic vcst.rest.vcenter.login_logout 1 vcst.rest.vcenter.login_logout_TEST_INSTANCE-1 - INFO - Logged In Successfully
+2020-08-05 13:31:42,178 - Generic vcst.rest.vcenter.login_logout 1 vcst.rest.vcenter.login_logout_TEST_INSTANCE-1 - INFO - Perform __init__
+2020-08-05 13:31:42,178 - Generic vcst.rest.vcenter.login_logout 1 vcst.rest.vcenter.login_logout_TEST_INSTANCE-1 - INFO - Finished  __init__
+2020-08-05 13:31:42,237 - Generic vcst.rest.vcenter.login_logout 1 vcst.rest.vcenter.login_logout_TEST_INSTANCE-1 - INFO - Perform testSetup
+2020-08-05 13:31:42,453 - Generic vcst.rest.vcenter.login_logout 1 vcst.rest.vcenter.login_logout_TEST_INSTANCE-1 - INFO - Perform testTask
+2020-08-05 13:31:42,480 - Generic vcst.rest.vcenter.login_logout 1 vcst.rest.vcenter.login_logout_TEST_INSTANCE-1 - INFO - Perform get_vc_session
+2020-08-05 13:31:42,512 - Generic vcst.rest.vcenter.login_logout 1 vcst.rest.vcenter.login_logout_TEST_INSTANCE-1 - INFO - 10.199.56.7
+2020-08-05 13:31:42,517 - Generic vcst.rest.vcenter.login_logout 1 vcst.rest.vcenter.login_logout_TEST_INSTANCE-1 - INFO - administrator@vsphere.local
+2020-08-05 13:31:42,544 - Generic vcst.rest.vcenter.login_logout 1 vcst.rest.vcenter.login_logout_TEST_INSTANCE-1 - INFO - <requests.sessions.Session object at 0x0000019207C7D2E8>
+2020-08-05 13:31:42,558 - Generic vcst.rest.vcenter.login_logout 1 vcst.rest.vcenter.login_logout_TEST_INSTANCE-1 - INFO - https://10.199.56.7:443/rest/com/vmware/cis/session
+2020-08-05 13:31:43,753 - Generic vcst.rest.vcenter.login_logout 1 vcst.rest.vcenter.login_logout_TEST_INSTANCE-1 - INFO - {"value":"2fbd7128d40d74dba9f29479fae25c18"}
+2020-08-05 13:31:43,788 - Generic vcst.rest.vcenter.login_logout 1 vcst.rest.vcenter.login_logout_TEST_INSTANCE-1 - INFO - Logged In Successfully
+2020-08-05 13:32:43,864 - Generic vcst.rest.vcenter.login_logout 1 vcst.rest.vcenter.login_logout_TEST_INSTANCE-1 - INFO - Perform testCleanup
+2020-08-05 13:33:59,259 - Generic vcst.rest.vcenter.login_logout 1 vcst.rest.vcenter.login_logout_TEST_INSTANCE-1 - INFO - Perform __init__
+2020-08-05 13:33:59,259 - Generic vcst.rest.vcenter.login_logout 1 vcst.rest.vcenter.login_logout_TEST_INSTANCE-1 - INFO - Finished  __init__
+2020-08-05 13:33:59,259 - Generic vcst.rest.vcenter.login_logout 1 vcst.rest.vcenter.login_logout_TEST_INSTANCE-1 - INFO - Perform testSetup
+2020-08-05 13:33:59,262 - Generic vcst.rest.vcenter.login_logout 1 vcst.rest.vcenter.login_logout_TEST_INSTANCE-1 - INFO - Perform testTask
+2020-08-05 13:33:59,262 - Generic vcst.rest.vcenter.login_logout 1 vcst.rest.vcenter.login_logout_TEST_INSTANCE-1 - INFO - Perform get_vc_session
+2020-08-05 13:33:59,262 - Generic vcst.rest.vcenter.login_logout 1 vcst.rest.vcenter.login_logout_TEST_INSTANCE-1 - INFO - 10.199.56.7
+2020-08-05 13:33:59,262 - Generic vcst.rest.vcenter.login_logout 1 vcst.rest.vcenter.login_logout_TEST_INSTANCE-1 - INFO - administrator@vsphere.local
+2020-08-05 13:33:59,262 - Generic vcst.rest.vcenter.login_logout 1 vcst.rest.vcenter.login_logout_TEST_INSTANCE-1 - INFO - <requests.sessions.Session object at 0x0000020E4E547A20>
+2020-08-05 13:33:59,263 - Generic vcst.rest.vcenter.login_logout 1 vcst.rest.vcenter.login_logout_TEST_INSTANCE-1 - INFO - https://10.199.56.7:443/rest/com/vmware/cis/session
+2020-08-05 13:34:00,377 - Generic vcst.rest.vcenter.login_logout 1 vcst.rest.vcenter.login_logout_TEST_INSTANCE-1 - INFO - {"value":"ac65ea154f190fc4e431883bf405c5e0"}
+2020-08-05 13:34:00,377 - Generic vcst.rest.vcenter.login_logout 1 vcst.rest.vcenter.login_logout_TEST_INSTANCE-1 - INFO - Logged In Successfully
+2020-08-05 13:34:05,493 - Generic vcst.rest.vcenter.login_logout 1 vcst.rest.vcenter.login_logout_TEST_INSTANCE-1 - INFO - Perform testTask
+2020-08-05 13:34:05,493 - Generic vcst.rest.vcenter.login_logout 1 vcst.rest.vcenter.login_logout_TEST_INSTANCE-1 - INFO - Perform get_vc_session
+2020-08-05 13:34:05,493 - Generic vcst.rest.vcenter.login_logout 1 vcst.rest.vcenter.login_logout_TEST_INSTANCE-1 - INFO - 10.199.56.7
+2020-08-05 13:34:05,493 - Generic vcst.rest.vcenter.login_logout 1 vcst.rest.vcenter.login_logout_TEST_INSTANCE-1 - INFO - administrator@vsphere.local
+2020-08-05 13:34:05,493 - Generic vcst.rest.vcenter.login_logout 1 vcst.rest.vcenter.login_logout_TEST_INSTANCE-1 - INFO - <requests.sessions.Session object at 0x0000020E4E547A20>
+2020-08-05 13:34:05,493 - Generic vcst.rest.vcenter.login_logout 1 vcst.rest.vcenter.login_logout_TEST_INSTANCE-1 - INFO - https://10.199.56.7:443/rest/com/vmware/cis/session
+2020-08-05 13:34:05,929 - Generic vcst.rest.vcenter.login_logout 1 vcst.rest.vcenter.login_logout_TEST_INSTANCE-1 - INFO - {"value":"97365d0a7054f7feeace1ce67fc0c974"}
+2020-08-05 13:34:05,930 - Generic vcst.rest.vcenter.login_logout 1 vcst.rest.vcenter.login_logout_TEST_INSTANCE-1 - INFO - Logged In Successfully
+2020-08-05 13:34:10,932 - Generic vcst.rest.vcenter.login_logout 1 vcst.rest.vcenter.login_logout_TEST_INSTANCE-1 - INFO - Perform testCleanup
+2020-08-05 13:38:35,032 - Generic vcst.rest.vcenter.login_logout 1 vcst.rest.vcenter.login_logout_TEST_INSTANCE-1 - INFO - Perform __init__
+2020-08-05 13:38:35,032 - Generic vcst.rest.vcenter.login_logout 1 vcst.rest.vcenter.login_logout_TEST_INSTANCE-1 - INFO - Finished  __init__
+2020-08-05 13:38:35,032 - Generic vcst.rest.vcenter.login_logout 1 vcst.rest.vcenter.login_logout_TEST_INSTANCE-1 - INFO - Perform testSetup
+2020-08-05 13:38:35,032 - Generic vcst.rest.vcenter.login_logout 1 vcst.rest.vcenter.login_logout_TEST_INSTANCE-1 - INFO - Perform testTask
+2020-08-05 13:38:35,032 - Generic vcst.rest.vcenter.login_logout 1 vcst.rest.vcenter.login_logout_TEST_INSTANCE-1 - INFO - Perform get_vc_session
+2020-08-05 13:38:35,032 - Generic vcst.rest.vcenter.login_logout 1 vcst.rest.vcenter.login_logout_TEST_INSTANCE-1 - INFO - 10.199.56.7
+2020-08-05 13:38:35,032 - Generic vcst.rest.vcenter.login_logout 1 vcst.rest.vcenter.login_logout_TEST_INSTANCE-1 - INFO - administrator@vsphere.local
+2020-08-05 13:38:35,033 - Generic vcst.rest.vcenter.login_logout 1 vcst.rest.vcenter.login_logout_TEST_INSTANCE-1 - INFO - <requests.sessions.Session object at 0x000001DD2094B208>
+2020-08-05 13:38:35,033 - Generic vcst.rest.vcenter.login_logout 1 vcst.rest.vcenter.login_logout_TEST_INSTANCE-1 - INFO - https://10.199.56.7:443/rest/com/vmware/cis/session
+2020-08-05 13:38:36,183 - Generic vcst.rest.vcenter.login_logout 1 vcst.rest.vcenter.login_logout_TEST_INSTANCE-1 - INFO - {"value":"9835d425da9850e28020df5cca7ddfd4"}
+2020-08-05 13:38:36,184 - Generic vcst.rest.vcenter.login_logout 1 vcst.rest.vcenter.login_logout_TEST_INSTANCE-1 - INFO - Logged In Successfully
+2020-08-05 13:38:41,185 - Generic vcst.rest.vcenter.login_logout 1 vcst.rest.vcenter.login_logout_TEST_INSTANCE-1 - INFO - Perform testTask
+2020-08-05 13:38:41,185 - Generic vcst.rest.vcenter.login_logout 1 vcst.rest.vcenter.login_logout_TEST_INSTANCE-1 - INFO - Perform get_vc_session
+2020-08-05 13:38:41,186 - Generic vcst.rest.vcenter.login_logout 1 vcst.rest.vcenter.login_logout_TEST_INSTANCE-1 - INFO - 10.199.56.7
+2020-08-05 13:38:41,186 - Generic vcst.rest.vcenter.login_logout 1 vcst.rest.vcenter.login_logout_TEST_INSTANCE-1 - INFO - administrator@vsphere.local
+2020-08-05 13:38:41,187 - Generic vcst.rest.vcenter.login_logout 1 vcst.rest.vcenter.login_logout_TEST_INSTANCE-1 - INFO - <requests.sessions.Session object at 0x000001DD2094B208>
+2020-08-05 13:38:41,187 - Generic vcst.rest.vcenter.login_logout 1 vcst.rest.vcenter.login_logout_TEST_INSTANCE-1 - INFO - https://10.199.56.7:443/rest/com/vmware/cis/session
+2020-08-05 13:38:41,608 - Generic vcst.rest.vcenter.login_logout 1 vcst.rest.vcenter.login_logout_TEST_INSTANCE-1 - INFO - {"value":"01d065c6b7c03865e2c41d40f6e43519"}
+2020-08-05 13:38:41,609 - Generic vcst.rest.vcenter.login_logout 1 vcst.rest.vcenter.login_logout_TEST_INSTANCE-1 - INFO - Logged In Successfully
+2020-08-05 13:38:46,611 - Generic vcst.rest.vcenter.login_logout 1 vcst.rest.vcenter.login_logout_TEST_INSTANCE-1 - INFO - Perform testCleanup

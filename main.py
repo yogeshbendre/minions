@@ -98,7 +98,7 @@ class minion:
 
         for it in range(1, (iterations+1)):
             total = total + 1
-            self.logger.info("Starting iteration #", total)
+            self.logger.info("Starting iteration #" + str(total))
             try:
                 testSuccess = self.testobj.testTask()
                 assert (testSuccess), "Test Failed"
@@ -113,7 +113,7 @@ class minion:
 
             pp = round(100 * passed / total)
             self.logger.info("Current Test Result: Run: " + str(total) + " out of : " + str(iterations) + " Pass: " + str(passed) + " Failed: " + str(failed) + " Pass Percentage: " + str(pp) + "%")
-            self.logger.info("Completed iteration #", total)
+            self.logger.info("Completed iteration #" + str(total))
             if retry > self.retryCnt:
                 break
 

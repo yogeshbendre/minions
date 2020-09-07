@@ -65,7 +65,23 @@ class TMCWorkFlow:
                 print("Get Domain: ")
                 domain = w.split(":")[0].split("domain-")[1]
                 print(domain)
-                print("Registraion Link: ")
+
+                #Enable dev_stack
+                print("Enable DEV_STACK flag")
+                cmd0 = 'curl -k -X GET "https://raw.githubusercontent.com/yogeshbendre/specialtools/master/yamlupdater.py" -o yamlupdater.py'
+                self.wcp_fetcher.run_command_on_wcp(w, cmd0)
+                time.sleep(1)
+
+                cmd0 = 'python3 yamlupdater.py'
+                self.wcp_fetcher.run_command_on_wcp(w, cmd0)
+                time.sleep(1)
+
+                cmd0 = 'kubectl apply -f /usr/lib/vmware-wcp/objects/PodVM-GuestCluster/70-tmc-agent-installer/tmc-agent-installer.yaml'
+                self.wcp_fetcher.run_command_on_wcp(w, cmd0)
+                time.sleep(60)
+
+
+                print("Registration Link: ")
                 reg_link = self.wcp_info[w]["lcp"]["localcontrolplane"]["status"]["registrationUrl"]
                 print(reg_link)
                 cmd1 = 'curl -k -X GET "https://raw.githubusercontent.com/yogeshbendre/ytmc/master/tmc_registration_template.yaml" -o /root/tmc_registration_template.yaml'
