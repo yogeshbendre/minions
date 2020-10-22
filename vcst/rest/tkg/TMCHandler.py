@@ -39,14 +39,14 @@ class TMC:
 
 
 
-    def create_local_control_plane(self, lcp_name, defaultClusterGroup = "default", k8sprovider = "KUBERNETES_PROVIDER_UNSPECIFIED"):
+    def create_local_control_plane(self, lcp_name, defaultClusterGroup = "default", k8sprovider = "VMWARE_TANZU_KUBERNETES_GRID_SERVICE"):
         self.generate_access_token()
         headers = {"Content-Type": "application/json", "Authorization": "Bearer " + self.access_token}
         print(headers)
-        body = {"localcontrolplane": {"fullName": {"orgId": str(self.org_id), "name": str(lcp_name)},
-                                      "spec": {"kubernetesProvider": k8sprovider,
+        body = {"managementCluster": {"fullName": {"orgId": str(self.org_id), "name": str(lcp_name)},
+                                      "spec": {"kubernetesProviderType": k8sprovider,
                                                "defaultClusterGroup": defaultClusterGroup}}}
-        url = "https://" + self.tmc_url + "/v1alpha1/localcontrolplanes"
+        url = "https://" + self.tmc_url + "/v1alpha1/managementclusters"
         print("url : " + url)
         print("body : " + str(body))
         resp = self.mysession.post(url, data=json.dumps(body), headers=headers)
