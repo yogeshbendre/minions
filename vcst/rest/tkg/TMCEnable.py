@@ -82,7 +82,7 @@ class TMCWorkFlow:
 
 
                 print("Registration Link: ")
-                reg_link = self.wcp_info[w]["lcp"]["localcontrolplane"]["status"]["registrationUrl"]
+                reg_link = self.wcp_info[w]["lcp"]["managementCluster"]["status"]["registrationUrl"]
                 print(reg_link)
                 cmd1 = 'curl -k -X GET "https://raw.githubusercontent.com/yogeshbendre/ytmc/master/tmc_registration_template.yaml" -o /root/tmc_registration_template.yaml'
                 self.wcp_fetcher.run_command_on_wcp(w,cmd1)
@@ -108,7 +108,7 @@ class TMCWorkFlow:
         myresp = self.tmc_handler.get_local_control_plane(lcp_name)
         try:
             lcp_info = myresp.json()
-            if("healthy" in lcp_info["localcontrolplane"]["status"]["health"].lower()):
+            if("healthy" in lcp_info["managementCluster"]["status"]["health"].lower()):
                 print("LCP: "+lcp_name+" seems to be healthy.")
                 return True
             else:

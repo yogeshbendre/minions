@@ -112,7 +112,7 @@ class TMCWorkFlow:
         myresp = self.tmc_handler.get_local_control_plane(lcp_name)
         try:
             lcp_info = myresp.json()
-            if("healthy" in lcp_info["localcontrolplane"]["status"]["health"].lower()):
+            if("healthy" in lcp_info["managementCluster"]["status"]["health"].lower()):
                 print("LCP: "+lcp_name+" seems to be healthy.")
                 return True
             else:
