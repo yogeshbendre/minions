@@ -61,7 +61,10 @@ class TMC:
         self.generate_access_token()
         headers = {"Content-Type": "application/json", "Authorization": "Bearer " + self.access_token}
         print(headers)
-        url = "https://" + self.tmc_url + "/v1alpha1/localcontrolplanes/"+lcp_name+"?fullName.orgId="+self.org_id+"&force=" + str(force).lower()
+        #url = "https://" + self.tmc_url + "/v1alpha1/localcontrolplanes/"+lcp_name+"?fullName.orgId="+self.org_id+"&force=" + str(force).lower()
+        url = "https://" + self.tmc_url + "/v1alpha1/managementclusters/" + lcp_name + "?fullName.orgId=" + self.org_id + "&force=" + str(
+            force).lower()
+
         print("url : " + url)
         resp = self.mysession.delete(url, headers=headers, timeout=60)
         print(resp.status_code)
@@ -75,7 +78,8 @@ class TMC:
         self.generate_access_token()
         headers = {"Content-Type": "application/json", "Authorization": "Bearer " + self.access_token}
         print(headers)
-        url = "https://" + self.tmc_url + "/v1alpha1/localcontrolplanes/" + lcp_name
+        #url = "https://" + self.tmc_url + "/v1alpha1/localcontrolplanes/" + lcp_name
+        url = "https://" + self.tmc_url + "/v1alpha1/managementclusters/" + lcp_name
         print("url : " + url)
         resp = self.mysession.get(url, headers=headers)
         print(resp.status_code)
@@ -89,7 +93,9 @@ class TMC:
         self.generate_access_token()
         headers = {"Content-Type": "application/json", "Authorization": "Bearer " + self.access_token}
         print(headers)
-        url = "https://" + self.tmc_url + "/v1alpha1/localcontrolplanes"
+        #url = "https://" + self.tmc_url + "/v1alpha1/localcontrolplanes"
+        url = "https://" + self.tmc_url + "/v1alpha1/managementclusters"
+
         print("url : " + url)
         resp = self.mysession.get(url, headers=headers)
         print(resp.status_code)
