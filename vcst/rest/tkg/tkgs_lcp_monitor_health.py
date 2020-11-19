@@ -39,7 +39,7 @@ class Test:
         isHealthy = True
         try:
             lcp_info = myresp.json()
-            if ("healthy" in lcp_info["localcontrolplane"]["status"]["health"].lower()):
+            if ("healthy" in lcp_info["managementCluster"]["status"]["health"].lower()):
                 print("LCP: " + self.lcp_name + " seems to be healthy.")
                 isHealthy = True
             else:
